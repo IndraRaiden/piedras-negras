@@ -15,9 +15,9 @@
           <h2 class="text-2xl font-medium text-[#611232] mb-8 text-center">Formulario de Contacto</h2>
 
           <form 
-            action="https://formsubmit.co/atencionciudadanapn25@gmail.com" 
+            action="https://formspree.io/f/mpwqvzdl" 
             method="POST"
-            @submit.prevent="handleSubmit" 
+            @submit="handleSubmit" 
             class="space-y-6"
           >
             <input type="hidden" name="_next" value="https://piedrasnegras.gob.mx/atencion-ciudadana">
@@ -120,6 +120,7 @@
                 <input
                   id="fechaNacimiento"
                   v-model="formData.fechaNacimiento"
+                  name="fecha_nacimiento"
                   type="date"
                   class="form-input"
                 />
@@ -260,34 +261,19 @@ const validateForm = () => {
   return !Object.values(errors).some(error => error)
 }
 
-const handleSubmit = async (e) => {
+const handleSubmit = (e) => {
+  e.preventDefault()
+  
   if (!validateForm()) return
 
-  try {
-    isLoading.value = true
-    
-    // Create formatted message for better email readability
-    const formattedData = {
-      ...formData,
-      '_format': 'Solicitud de Atención Ciudadana',
-      '_timestamp': new Date().toLocaleString()
-    }
+  const confirmSubmit = confirm('¿Estás seguro de enviar este formulario?')
+  if (!confirmSubmit) return
 
-    const form = e.target
-    // Submit the form using FormSubmit
-    await fetch(form.action, {
-      method: 'POST',
-      body: new FormData(form)
-    })
-
-    showSuccess.value = true
-    resetForm()
-  } catch (error) {
-    console.error('Error al enviar el formulario:', error)
-    alert('Hubo un error al enviar el formulario. Por favor, intente nuevamente.')
-  } finally {
-    isLoading.value = false
-  }
+  isLoading.value = true
+  
+  setTimeout(() => {
+    e.target.submit()
+  }, 100)
 }
 
 const resetForm = () => {
