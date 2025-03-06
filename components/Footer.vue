@@ -11,6 +11,9 @@
               src="/images/logo_footer.png"
               alt="Logo Piedras Negras"
               class="h-40 w-auto hover:opacity-90 transition-all duration-300"
+              width="160"
+              height="160"
+              loading="lazy"
             />
           </div>
           <!-- Íconos redes sociales -->
@@ -120,3 +123,14 @@
     </div>
   </footer>
 </template>
+
+<script setup>
+// Prefetch the logo image when this component mounts
+import { onMounted } from 'vue'
+
+onMounted(() => {
+  // Prefetch the logo
+  const imgPreload = new Image();
+  imgPreload.src = '/images/logo_footer.png';
+})
+</script>

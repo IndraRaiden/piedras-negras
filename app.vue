@@ -9,11 +9,7 @@
         <NuxtLoadingIndicator color="#5e1210" height="3px" />
         <NuxtPage />
       </main>
-      <ClientOnly>
-        <Suspense>
-          <Footer v-if="showFooter" />
-        </Suspense>
-      </ClientOnly>
+      <Footer />
     </div>
   </div>
 </template>
@@ -21,15 +17,11 @@
 <script setup>
 import { ref, onMounted } from 'vue'
 import { useRoute } from 'vue-router'
+import Footer from '~/components/Footer.vue'
 
 const route = useRoute()
 const mostrarEnConstruccion = useConstruction()
-const showFooter = ref(false)
-
-// Lazy load del footer
-const Footer = defineAsyncComponent(() => 
-  import('~/components/Footer.vue')
-)
+const showFooter = ref(true)
 
 // Add meta viewport tag
 useHead({
@@ -51,9 +43,8 @@ useHead({
 
 // Show footer after a delay
 onMounted(() => {
-  setTimeout(() => {
-    showFooter.value = true
-  }, 1000)
+  // Immediately show footer instead of delaying it
+  showFooter.value = true
 })
 </script>
 
