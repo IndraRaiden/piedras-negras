@@ -28,6 +28,9 @@
 
     <!-- Main Content -->
     <div class="container mx-auto px-4 py-12">
+      <!-- Componente de Formulario de Propuestas -->
+      <FormularioPropuestas class="mb-16" />
+      
       <!-- Secciones del Plan -->
       <section class="mb-16" id="desarrollo-social">
         <h2 class="text-2xl font-semibold text-gray-900 mb-8 text-center">Ejes Estratégicos</h2>
@@ -100,9 +103,6 @@
           </div>
         </div>
       </section>
-
-      <!-- Componente de Formulario de Propuestas -->
-      <FormularioPropuestas class="mb-16" />
     </div>
   </div>
 </template>
