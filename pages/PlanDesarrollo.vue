@@ -1,6 +1,6 @@
 <template>
   <div>
-    <!-- Banner Section using BannerV2 component -->
+    <!-- Banner  Section using BannerV2 component -->
     <BannerV2
       title="Plan Municipal de Desarrollo"
       subtitle="Nuestra visión y objetivos para el futuro de Piedras Negras"
