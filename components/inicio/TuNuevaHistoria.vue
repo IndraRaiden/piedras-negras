@@ -147,7 +147,7 @@
                 
                 <img
                   src="~/public/images/iconos_secciones/Obras_publicas_guindo.png"
-                  alt="Plan de Desarrollo"
+                  alt="Plan Municipal de Desarrollo"
                   class="block w-48 h-48 object-contain group-hover:scale-110 transition-all duration-500"
                 />
               </div>
@@ -160,7 +160,7 @@
                        transition-all duration-300 transform hover:-translate-y-0.5
                        relative overflow-hidden group"
               >
-                <span class="relative z-10">Plan de Desarrollo</span>
+                <span class="relative z-10">Plan Municipal de Desarrollo</span>
                 <div
                   class="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0
                          translate-x-[-100%] group-hover:translate-x-[100%]
