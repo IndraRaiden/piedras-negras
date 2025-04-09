@@ -1,6 +1,6 @@
 <template>
   <div class="container mx-auto py-8">
-    <h1 class="text-3xl font-bold mb-6">Actas Municipales</h1>
+    <h1 class="text-3xl font-bold mb-6">Actas constitutivas de proveedores y contratistas</h1>
     <div class="bg-white shadow-lg rounded-lg p-6">
       <div class="mb-4">
         <input 
@@ -146,6 +146,6 @@ function formatDate(fileName) {
 
 // Set the page title
 useHead({
-  title: 'Actas Municipales - Municipio de Piedras Negras'
+  title: 'Actas constitutivas de proveedores y contratistas - Municipio de Piedras Negras'
 });
 </script>
