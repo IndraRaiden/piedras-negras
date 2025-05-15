@@ -46,7 +46,7 @@
         <!-- Grid de noticias -->
         <div v-else class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 lg:gap-8">
           <article
-            v-for="news in newsData?.docs"
+            v-for="news in allNewsItems"
             :key="news.id"
             class="bg-white rounded-lg shadow-md overflow-hidden transform hover:scale-[1.02] transition-transform duration-200"
           >
@@ -83,6 +83,26 @@
             </NuxtLink>
           </article>
         </div>
+
+        <!-- Load More Button -->
+        <div v-if="!pending && !error && hasMorePages" class="mt-8 text-center">
+          <button 
+            @click="loadMoreNews" 
+            class="px-6 py-2 bg-[#5e1210] text-white rounded-md hover:bg-[#7a1915] transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#5e1210]"
+            :disabled="loadingMore"
+          >
+            <span v-if="!loadingMore">Cargar más noticias</span>
+            <span v-else class="flex items-center justify-center">
+              <span class="animate-spin h-4 w-4 border-2 border-white border-t-transparent rounded-full mr-2"></span>
+              Cargando...
+            </span>
+          </button>
+        </div>
+        
+        <!-- No More News -->
+        <div v-if="!pending && !error && !hasMorePages && allNewsItems.length > 0" class="mt-6 text-center text-gray-500">
+          No hay más noticias para mostrar
+        </div>
       </div>
     </section>
   </div>
@@ -90,6 +110,7 @@
 
 <script setup lang="ts">
 import { useFetch } from '#app'
+import { ref, watchEffect } from 'vue'
 import BannerSection from '~/components/BannerSection.vue'
 
 interface NewsImage {
@@ -120,8 +141,54 @@ interface PayloadNewsResponse {
   nextPage: number | null
 }
 
-// Fetch de noticias
-const { data: newsData, pending, error } = await useFetch<PayloadNewsResponse>('/api/news')
+// Pagination state
+const currentPage = ref(1)
+const itemsPerPage = 6
+const allNewsItems = ref<NewsDoc[]>([])
+const hasMorePages = ref(true)
+const loadingMore = ref(false)
+
+// Fetch de noticias inicial
+const { data: newsData, pending, error } = await useFetch<PayloadNewsResponse>('/api/news', {
+  params: {
+    limit: itemsPerPage,
+    page: 1
+  }
+})
+
+// Actualizar allNewsItems cuando se carguen los datos iniciales
+watchEffect(() => {
+  if (newsData.value?.docs) {
+    allNewsItems.value = [...newsData.value.docs]
+    hasMorePages.value = newsData.value.hasNextPage
+  }
+})
+
+// Función para cargar más noticias
+async function loadMoreNews() {
+  if (!hasMorePages.value) return
+  
+  loadingMore.value = true
+  currentPage.value++
+  
+  try {
+    const { data } = await useFetch<PayloadNewsResponse>('/api/news', {
+      params: {
+        limit: itemsPerPage,
+        page: currentPage.value
+      }
+    })
+    
+    if (data.value?.docs) {
+      allNewsItems.value = [...allNewsItems.value, ...data.value.docs]
+      hasMorePages.value = data.value.hasNextPage
+    }
+  } catch (e) {
+    console.error('Error loading more news:', e)
+  } finally {
+    loadingMore.value = false
+  }
+}
 
 // Mapeo de categorías
 const getCategoryLabel = (value: string | undefined) => {
