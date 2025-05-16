@@ -15,9 +15,10 @@
       </div>
     </div>
     
-    <!-- First Banner (loads immediately) -->
-    <div v-else-if="firstBanner" class="relative w-full h-full">
-      <div class="absolute inset-0">
+    <!-- First Banner (loads immediately) and All Banners (lazy loaded) -->
+    <div v-else-if="firstBanner || (allBannersLoaded && banners.length > 0)" class="relative w-full h-full">
+      <!-- Show first banner until all banners are loaded -->
+      <div v-if="firstBanner && !allBannersLoaded" class="absolute inset-0">
         <picture>
           <!-- Mobile devices -->
           <source
@@ -44,11 +45,9 @@
           />
         </picture>
       </div>
-    </div>
-    
-    <!-- All Banners (lazy loaded) -->
-    <div v-else-if="allBannersLoaded && banners.length > 0" class="relative w-full h-full">
-      <TransitionGroup name="fade">
+      
+      <!-- All Banners (lazy loaded) -->
+      <TransitionGroup v-if="allBannersLoaded && banners.length > 0" name="fade">
         <div 
           v-for="(banner, index) in banners" 
           :key="banner.id"
@@ -106,20 +105,18 @@ const allBannersLoaded = ref(false)
 const firstBanner = ref(null)
 const banners = ref([])
 const currentIndex = ref(0)
+const error = ref(null)
 let intervalId = null
-let error = ref(null)
 
 // First, load only the first banner with high priority
 const loadFirstBanner = async () => {
   try {
-    const { data, error: fetchError } = await useFetch('/api/banners/hero', {
-      query: { limit: 1 }
-    })
+    const { data: bannerData, error: fetchError } = await useFetch('/api/banners/hero')
     
     if (fetchError.value) {
       error.value = fetchError.value
-    } else if (data.value && data.value.length > 0) {
-      firstBanner.value = data.value[0]
+    } else if (bannerData.value && bannerData.value.length > 0) {
+      firstBanner.value = bannerData.value[0]
     }
   } catch (err) {
     console.error('Error loading first banner:', err)
@@ -132,18 +129,25 @@ const loadFirstBanner = async () => {
 // Then, load all banners after the page has loaded
 const loadAllBanners = async () => {
   try {
-    const { data, error: fetchError } = await useFetch('/api/banners/hero')
+    const { data: bannerData, error: fetchError } = await useFetch('/api/banners/hero')
     
     if (fetchError.value) {
       error.value = fetchError.value
-    } else if (data.value) {
-      banners.value = data.value
-      allBannersLoaded.value = true
+    } else if (bannerData.value) {
+      banners.value = bannerData.value
       
-      // Start rotation if we have multiple banners
-      if (banners.value.length > 1) {
-        startRotation()
-      }
+      // Set the current index to 0 to ensure we start with the first banner
+      currentIndex.value = 0
+      
+      // Mark as loaded after a small delay to ensure smooth transition
+      setTimeout(() => {
+        allBannersLoaded.value = true
+        
+        // Start rotation if we have multiple banners
+        if (banners.value.length > 1) {
+          startRotation()
+        }
+      }, 100)
     }
   } catch (err) {
     console.error('Error loading all banners:', err)
@@ -169,16 +173,10 @@ loadFirstBanner()
 
 // Load all banners after the component is mounted
 onMounted(() => {
-  // Use requestIdleCallback or setTimeout to defer loading until after the initial render
-  if (window.requestIdleCallback) {
-    window.requestIdleCallback(() => {
-      loadAllBanners()
-    })
-  } else {
-    setTimeout(() => {
-      loadAllBanners()
-    }, 200) // Small delay to ensure first banner is displayed first
-  }
+  // Use setTimeout to defer loading until after the initial render
+  setTimeout(() => {
+    loadAllBanners()
+  }, 200) // Small delay to ensure first banner is displayed first
 })
 
 // Clean up interval when component is unmounted
