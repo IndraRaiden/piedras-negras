@@ -1,7 +1,7 @@
 <template>
   <div class="w-full">
-    <!-- Componente separado: HeroVideo -->
-    <HeroVideo />
+    <!-- Componente separado: LazyLoadHero (carga optimizada) -->
+    <LazyLoadHero />
 
     <!-- Componente separado: TuNuevaHistoria -->
     <TuNuevaHistoria />
@@ -19,7 +19,7 @@
  * Importamos los componentes separados.
  * Ajusta las rutas según la ubicación real de tus archivos .vue
  */
-import HeroVideo from '~/components/inicio/HeroVideo.vue'
+import LazyLoadHero from '~/components/inicio/LazyLoadHero.vue'
 import TuNuevaHistoria from '~/components/inicio/TuNuevaHistoria.vue'
 import SeccionesHome from '~/components/inicio/SeccionesHome.vue'
 import UltimasNoticias from '~/components/inicio/UltimasNoticias.vue'
