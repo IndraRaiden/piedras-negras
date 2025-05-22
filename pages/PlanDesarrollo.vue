@@ -34,6 +34,41 @@
       <div id="ejes-tematicos-section">
         <EjesForosTematicos />
       </div>
+      
+      <!-- Diagnóstico Gobernanza -->
+      <div id="diagnostico-gobernanza-section">
+        <DiagnosticoGobernanza />
+      </div>
+      
+      <!-- Diagnóstico Desarrollo -->
+      <div id="diagnostico-desarrollo-section">
+        <DiagnosticoDesarrollo />
+      </div>
+      
+      <!-- Objetivo Bienestar -->
+      <div id="objetivo-bienestar-section">
+        <ObjetivoBienestar />
+      </div>
+      
+      <!-- Diagnóstico Economía -->
+      <div id="diagnostico-economia-section">
+        <DiagnosticoEconomia />
+      </div>
+      
+      <!-- Diagnóstico Ciudad -->
+      <div id="diagnostico-ciudad-section">
+        <DiagnosticoCiudad />
+      </div>
+      
+      <!-- Objetivo Ciudad -->
+      <div id="objetivo-ciudad-section">
+        <ObjetivoCiudad />
+      </div>
+      
+      <!-- Diagnóstico Desarrollo Sustentable -->
+      <div id="diagnostico-desarrollo-sustentable-section">
+        <DiagnosticoDesarrolloSustentable />
+      </div>
     </div>
   </div>
 </template>
@@ -46,6 +81,13 @@ import Introduccion from '~/components/plan/Introduccion.vue'
 import MarcoJuridico from '~/components/plan/MarcoJuridico.vue'
 import ForosConsultaCiudadana from '~/components/plan/ForosConsultaCiudadana.vue'
 import EjesForosTematicos from '~/components/plan/EjesForosTematicos.vue'
+import DiagnosticoGobernanza from '~/components/plan/DiagnosticoGobernanza.vue'
+import DiagnosticoDesarrollo from '~/components/plan/DiagnosticoDesarrollo.vue'
+import ObjetivoBienestar from '~/components/plan/ObjetivoBienestar.vue'
+import DiagnosticoEconomia from '~/components/plan/DiagnosticoEconomia.vue'
+import DiagnosticoCiudad from '~/components/plan/DiagnosticoCiudad.vue'
+import ObjetivoCiudad from '~/components/plan/ObjetivoCiudad.vue'
+import DiagnosticoDesarrolloSustentable from '~/components/plan/DiagnosticoDesarrolloSustentable.vue'
 
 definePageMeta({
   title: 'Plan Municipal de Desarrollo',
