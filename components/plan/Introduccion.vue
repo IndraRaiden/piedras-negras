@@ -1,10 +1,14 @@
 <template>
   <div class="introduccion-component">
     <div class="bg-white rounded-lg shadow-md p-8 mb-8">
-      <h2 class="text-3xl font-bold text-primary mb-6">Mensaje del Presidente</h2>
+      <h2 class="text-3xl font-bold text-primary mb-6 text-center">Mensaje del Presidente</h2>
       
       <div class="prose prose-lg max-w-none">
-        <h3 class="text-2xl font-bold text-gray-800 mb-4">Mensaje del Presidente Municipal de Piedras Negras, Coahuila</h3>
+        <h3 class="text-2xl font-bold text-gray-800 mb-4 text-center">Mensaje del Presidente Municipal de Piedras Negras, Coahuila</h3>
+        
+        <div class="flex justify-center mb-8">
+          <img src="/images/Imagen de WhatsApp 2025-05-21 a las 18.03.49_b5eb26f3.jpg" alt="Presidente Municipal de Piedras Negras" class="rounded-lg shadow-md max-w-full h-auto" style="max-height: 600px; width: auto;" />
+        </div>
         
         <p class="mb-4 font-semibold">Queridos Nigropetenses:</p>
         

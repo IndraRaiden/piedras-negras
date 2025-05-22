@@ -9,9 +9,6 @@
 
     <!-- Main Content -->
     <div class="container mx-auto px-4 py-12">
-      <!-- Componente de Formulario de Propuestas -->
-      <FormularioPropuestas class="mb-16" />
-      
       <!-- Index Section -->
       <Indice class="mb-16" />
       
@@ -184,6 +181,9 @@
       <div id="lineas-accion-gobierno-section" class="mb-16">
         <LineasAccionGobierno />
       </div>
+
+      <!-- Componente de Formulario de Propuestas -->
+      <FormularioPropuestas class="mb-16" />
 
     </div>
   </div>
