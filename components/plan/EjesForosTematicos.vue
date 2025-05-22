@@ -120,14 +120,12 @@
       </p>
       
       <div class="my-8 flex justify-center">
-        <div class="relative w-full max-w-3xl h-64 bg-gray-200 rounded-lg border border-gray-300 flex flex-col items-center justify-center">
-          <div class="text-gray-500 mb-2">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-            </svg>
+        <div class="relative w-full max-w-3xl rounded-lg shadow-md overflow-hidden">
+          <img src="/images/plandesarrollo/Captura de pantalla 2025-05-22 105441.png" alt="Participantes durante el Foro 'Igualdad Sustantiva y Derechos de las Mujeres'" class="w-full object-cover" />
+          <div class="bg-white p-3">
+            <p class="text-gray-600 text-center">Imagen de los participantes durante el Foro "Igualdad Sustantiva y Derechos de las Mujeres" realizado en la Casa de las Artes.</p>
+            <p class="text-sm text-gray-500 text-center mt-1">21 de marzo de 2025</p>
           </div>
-          <p class="text-gray-600 text-center px-4">Imagen de los participantes durante el Foro "Igualdad Sustantiva y Derechos de las Mujeres" realizado en la Casa de las Artes.</p>
-          <p class="text-sm text-gray-500 mt-2">21 de marzo de 2025</p>
         </div>
       </div>
       
@@ -156,14 +154,12 @@
       </p>
       
       <div class="my-8 flex justify-center">
-        <div class="relative w-full max-w-3xl h-64 bg-gray-200 rounded-lg border border-gray-300 flex flex-col items-center justify-center">
-          <div class="text-gray-500 mb-2">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-            </svg>
+        <div class="relative w-full max-w-3xl rounded-lg shadow-md overflow-hidden">
+          <img src="/images/plandesarrollo/Captura de pantalla 2025-05-22 105558.png" alt="Participantes durante el Foro de Desarrollo Sustentable" class="w-full object-cover" />
+          <div class="bg-white p-3">
+            <p class="text-gray-600 text-center">Participantes durante el Foro de Desarrollo Sustentable compartiendo propuestas para una ciudad más verde y sostenible.</p>
+            <p class="text-sm text-gray-500 text-center mt-1">27 de abril de 2025</p>
           </div>
-          <p class="text-gray-600 text-center px-4">Participantes durante el Foro de Desarrollo Sustentable compartiendo propuestas para una ciudad más verde y sostenible.</p>
-          <p class="text-sm text-gray-500 mt-2">27 de abril de 2025</p>
         </div>
       </div>
       
@@ -206,14 +202,12 @@
       </p>
       
       <div class="my-8 flex justify-center">
-        <div class="relative w-full max-w-3xl h-64 bg-gray-200 rounded-lg border border-gray-300 flex flex-col items-center justify-center">
-          <div class="text-gray-500 mb-2">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-            </svg>
+        <div class="relative w-full max-w-3xl rounded-lg shadow-md overflow-hidden">
+          <img src="/images/plandesarrollo/Captura de pantalla 2025-05-22 105623.png" alt="Ciudadanos participando en el Foro de Gobernanza con Justicia, Derechos Humanos y Migración" class="w-full object-cover" />
+          <div class="bg-white p-3">
+            <p class="text-gray-600 text-center">Ciudadanos participando en el Foro de Gobernanza con Justicia, Derechos Humanos y Migración en la Sala de Cabildo de la Presidencia Municipal.</p>
+            <p class="text-sm text-gray-500 text-center mt-1">1 de abril de 2025</p>
           </div>
-          <p class="text-gray-600 text-center px-4">Ciudadanos participando en el Foro de Gobernanza con Justicia, Derechos Humanos y Migración en la Sala de Cabildo de la Presidencia Municipal.</p>
-          <p class="text-sm text-gray-500 mt-2">1 de abril de 2025</p>
         </div>
       </div>
       
@@ -249,14 +243,12 @@
       </p>
       
       <div class="my-8 flex justify-center">
-        <div class="relative w-full max-w-3xl h-64 bg-gray-200 rounded-lg border border-gray-300 flex flex-col items-center justify-center">
-          <div class="text-gray-500 mb-2">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-            </svg>
+        <div class="relative w-full max-w-3xl rounded-lg shadow-md overflow-hidden">
+          <img src="/images/plandesarrollo/Captura de pantalla 2025-05-22 105644.png" alt="Representantes del sector empresarial y comercial durante el Foro 'Economía Moral y Trabajo'" class="w-full object-cover" />
+          <div class="bg-white p-3">
+            <p class="text-gray-600 text-center">Representantes del sector empresarial y comercial durante el Foro "Economía Moral y Trabajo" compartiendo propuestas para el desarrollo económico de Piedras Negras.</p>
+            <p class="text-sm text-gray-500 text-center mt-1">8 de abril de 2025</p>
           </div>
-          <p class="text-gray-600 text-center px-4">Representantes del sector empresarial y comercial durante el Foro "Economía Moral y Trabajo" compartiendo propuestas para el desarrollo económico de Piedras Negras.</p>
-          <p class="text-sm text-gray-500 mt-2">8 de abril de 2025</p>
         </div>
       </div>
       
@@ -287,14 +279,12 @@
       </p>
       
       <div class="my-8 flex justify-center">
-        <div class="relative w-full max-w-3xl h-64 bg-gray-200 rounded-lg border border-gray-300 flex flex-col items-center justify-center">
-          <div class="text-gray-500 mb-2">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-            </svg>
+        <div class="relative w-full max-w-3xl rounded-lg shadow-md overflow-hidden">
+          <img src="/images/plandesarrollo/Captura de pantalla 2025-05-22 111724.png" alt="Arquitectos y estudiantes participando en el Foro 'Ciudad Próspera y Conectada'" class="w-full object-cover" />
+          <div class="bg-white p-3">
+            <p class="text-gray-600 text-center">Arquitectos y estudiantes participando en el Foro "Ciudad Próspera y Conectada" compartiendo propuestas para el desarrollo urbano de Piedras Negras.</p>
+            <p class="text-sm text-gray-500 text-center mt-1">10 de abril de 2025</p>
           </div>
-          <p class="text-gray-600 text-center px-4">Arquitectos y estudiantes participando en el Foro "Ciudad Próspera y Conectada" compartiendo propuestas para el desarrollo urbano de Piedras Negras.</p>
-          <p class="text-sm text-gray-500 mt-2">10 de abril de 2025</p>
         </div>
       </div>
       
