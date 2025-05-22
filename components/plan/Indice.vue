@@ -95,193 +95,249 @@
           </div>
           
           <div class="flex justify-between items-baseline">
-            <h3 class="font-bold text-xl">Diagnóstico Gobernanza con Justicia y Participación Ciudadana</h3>
+            <a @click.prevent="scrollToSection('diagnostico-gobernanza-section')" href="#" class="hover:text-primary transition-colors duration-300 cursor-pointer flex items-center group">
+              <h3 class="font-bold text-xl group-hover:translate-x-1 transition-transform duration-300">Diagnóstico Gobernanza con Justicia y Participación Ciudadana</h3>
+            </a>
             <div class="border-b border-dashed border-gray-400 flex-grow mx-2"></div>
             <span class="font-bold">25</span>
           </div>
           
           <div class="flex justify-between items-baseline">
-            <h3 class="font-bold text-xl">Objetivo Gobernanza con Justicia y Participación Ciudadana</h3>
+            <a @click.prevent="scrollToSection('objetivo-gobernanza-section')" href="#" class="hover:text-primary transition-colors duration-300 cursor-pointer flex items-center group">
+              <h3 class="font-bold text-xl group-hover:translate-x-1 transition-transform duration-300">Objetivo Gobernanza con Justicia y Participación Ciudadana</h3>
+            </a>
             <div class="border-b border-dashed border-gray-400 flex-grow mx-2"></div>
             <span class="font-bold">31</span>
           </div>
           
           <div class="flex justify-between items-baseline">
-            <h3 class="font-bold text-xl">Diagnóstico Desarrollo con Bienestar y Humanismo</h3>
+            <a @click.prevent="scrollToSection('diagnostico-desarrollo-section')" href="#" class="hover:text-primary transition-colors duration-300 cursor-pointer flex items-center group">
+              <h3 class="font-bold text-xl group-hover:translate-x-1 transition-transform duration-300">Diagnóstico Desarrollo con Bienestar y Humanismo</h3>
+            </a>
             <div class="border-b border-dashed border-gray-400 flex-grow mx-2"></div>
             <span class="font-bold">30</span>
           </div>
           
           <div class="flex justify-between items-baseline">
-            <h3 class="font-bold text-xl">Objetivo General de Desarrollo con Bienestar y Humanismo</h3>
+            <a @click.prevent="scrollToSection('objetivo-bienestar-section')" href="#" class="hover:text-primary transition-colors duration-300 cursor-pointer flex items-center group">
+              <h3 class="font-bold text-xl group-hover:translate-x-1 transition-transform duration-300">Objetivo General de Desarrollo con Bienestar y Humanismo</h3>
+            </a>
             <div class="border-b border-dashed border-gray-400 flex-grow mx-2"></div>
             <span class="font-bold">36</span>
           </div>
           
           <div class="flex justify-between items-baseline">
-            <h3 class="font-bold text-xl">Diagnóstico Economía Moral y Trabajo</h3>
+            <a @click.prevent="scrollToSection('diagnostico-economia-section')" href="#" class="hover:text-primary transition-colors duration-300 cursor-pointer flex items-center group">
+              <h3 class="font-bold text-xl group-hover:translate-x-1 transition-transform duration-300">Diagnóstico Economía Moral y Trabajo</h3>
+            </a>
             <div class="border-b border-dashed border-gray-400 flex-grow mx-2"></div>
             <span class="font-bold">41</span>
           </div>
           
           <div class="flex justify-between items-baseline">
-            <h3 class="font-bold text-xl">Objetivo General en Economía Moral y Trabajo</h3>
+            <a @click.prevent="scrollToSection('objetivo-economia-section')" href="#" class="hover:text-primary transition-colors duration-300 cursor-pointer flex items-center group">
+              <h3 class="font-bold text-xl group-hover:translate-x-1 transition-transform duration-300">Objetivo General en Economía Moral y Trabajo</h3>
+            </a>
             <div class="border-b border-dashed border-gray-400 flex-grow mx-2"></div>
             <span class="font-bold">44</span>
           </div>
           
           <div class="flex justify-between items-baseline">
-            <h3 class="font-bold text-xl">Diagnóstico Ciudad Próspera y Conectada</h3>
+            <a @click.prevent="scrollToSection('diagnostico-ciudad-section')" href="#" class="hover:text-primary transition-colors duration-300 cursor-pointer flex items-center group">
+              <h3 class="font-bold text-xl group-hover:translate-x-1 transition-transform duration-300">Diagnóstico Ciudad Próspera y Conectada</h3>
+            </a>
             <div class="border-b border-dashed border-gray-400 flex-grow mx-2"></div>
             <span class="font-bold">47</span>
           </div>
           
           <div class="flex justify-between items-baseline">
-            <h3 class="font-bold text-xl">Objetivo General en Ciudad Próspera y Conectada</h3>
+            <a @click.prevent="scrollToSection('objetivo-ciudad-section')" href="#" class="hover:text-primary transition-colors duration-300 cursor-pointer flex items-center group">
+              <h3 class="font-bold text-xl group-hover:translate-x-1 transition-transform duration-300">Objetivo General en Ciudad Próspera y Conectada</h3>
+            </a>
             <div class="border-b border-dashed border-gray-400 flex-grow mx-2"></div>
             <span class="font-bold">50</span>
           </div>
           
           <div class="flex justify-between items-baseline">
-            <h3 class="font-bold text-xl">Diagnóstico Desarrollo Sustentable</h3>
+            <a @click.prevent="scrollToSection('diagnostico-desarrollo-sustentable-section')" href="#" class="hover:text-primary transition-colors duration-300 cursor-pointer flex items-center group">
+              <h3 class="font-bold text-xl group-hover:translate-x-1 transition-transform duration-300">Diagnóstico Desarrollo Sustentable</h3>
+            </a>
             <div class="border-b border-dashed border-gray-400 flex-grow mx-2"></div>
             <span class="font-bold">52</span>
           </div>
           
           <div class="flex justify-between items-baseline">
-            <h3 class="font-bold text-xl">Objetivo Desarrollo Sustentable</h3>
+            <a @click.prevent="scrollToSection('objetivo-desarrollo-sustentable-section')" href="#" class="hover:text-primary transition-colors duration-300 cursor-pointer flex items-center group">
+              <h3 class="font-bold text-xl group-hover:translate-x-1 transition-transform duration-300">Objetivo Desarrollo Sustentable</h3>
+            </a>
             <div class="border-b border-dashed border-gray-400 flex-grow mx-2"></div>
             <span class="font-bold">54</span>
           </div>
           
           <div class="flex justify-between items-baseline">
-            <h3 class="font-bold text-xl">Diagnóstico Derechos Humanos y Migración</h3>
+            <a @click.prevent="scrollToSection('diagnostico-derechos-humanos-migracion-section')" href="#" class="hover:text-primary transition-colors duration-300 cursor-pointer flex items-center group">
+              <h3 class="font-bold text-xl group-hover:translate-x-1 transition-transform duration-300">Diagnóstico Derechos Humanos y Migración</h3>
+            </a>
             <div class="border-b border-dashed border-gray-400 flex-grow mx-2"></div>
             <span class="font-bold">57</span>
           </div>
           
           <div class="flex justify-between items-baseline">
-            <h3 class="font-bold text-xl">Objetivo Derechos Humanos y Migración</h3>
+            <a @click.prevent="scrollToSection('objetivo-derechos-humanos-migracion-section')" href="#" class="hover:text-primary transition-colors duration-300 cursor-pointer flex items-center group">
+              <h3 class="font-bold text-xl group-hover:translate-x-1 transition-transform duration-300">Objetivo Derechos Humanos y Migración</h3>
+            </a>
             <div class="border-b border-dashed border-gray-400 flex-grow mx-2"></div>
             <span class="font-bold">61</span>
           </div>
           
           <div class="flex justify-between items-baseline">
-            <h3 class="font-bold text-xl">Diagnóstico Igualdad Sustantiva y Derechos de las Mujeres</h3>
+            <a @click.prevent="scrollToSection('diagnostico-igualdad-section')" href="#" class="hover:text-primary transition-colors duration-300 cursor-pointer flex items-center group">
+              <h3 class="font-bold text-xl group-hover:translate-x-1 transition-transform duration-300">Diagnóstico Igualdad Sustantiva y Derechos de las Mujeres</h3>
+            </a>
             <div class="border-b border-dashed border-gray-400 flex-grow mx-2"></div>
             <span class="font-bold">64</span>
           </div>
           
           <div class="flex justify-between items-baseline">
-            <h3 class="font-bold text-xl">Objetivo Igualdad Sustantiva y Derechos de las Mujeres</h3>
+            <a @click.prevent="scrollToSection('objetivo-igualdad-section')" href="#" class="hover:text-primary transition-colors duration-300 cursor-pointer flex items-center group">
+              <h3 class="font-bold text-xl group-hover:translate-x-1 transition-transform duration-300">Objetivo Igualdad Sustantiva y Derechos de las Mujeres</h3>
+            </a>
             <div class="border-b border-dashed border-gray-400 flex-grow mx-2"></div>
             <span class="font-bold">67</span>
           </div>
           
           <div class="flex justify-between items-baseline">
-            <h3 class="font-bold text-xl">Diagnóstico Tejido Social Fuerte</h3>
+            <a @click.prevent="scrollToSection('diagnostico-tejido-social-section')" href="#" class="hover:text-primary transition-colors duration-300 cursor-pointer flex items-center group">
+              <h3 class="font-bold text-xl group-hover:translate-x-1 transition-transform duration-300">Diagnóstico Tejido Social Fuerte</h3>
+            </a>
             <div class="border-b border-dashed border-gray-400 flex-grow mx-2"></div>
             <span class="font-bold">68</span>
           </div>
           
           <div class="flex justify-between items-baseline ml-8">
-            <h3 class="font-medium text-lg">Atención a la Juventud</h3>
+            <a @click.prevent="scrollToSection('atencion-juventud-section')" href="#" class="hover:text-primary transition-colors duration-300 cursor-pointer flex items-center group">
+              <h3 class="font-medium text-lg group-hover:translate-x-1 transition-transform duration-300">Atención a la Juventud</h3>
+            </a>
             <div class="border-b border-dashed border-gray-400 flex-grow mx-2"></div>
             <span class="font-medium">68</span>
           </div>
           
           <div class="flex justify-between items-baseline ml-8">
-            <h3 class="font-medium text-lg">Desarrollo Rural</h3>
+            <a @click.prevent="scrollToSection('desarrollo-rural-section')" href="#" class="hover:text-primary transition-colors duration-300 cursor-pointer flex items-center group">
+              <h3 class="font-medium text-lg group-hover:translate-x-1 transition-transform duration-300">Desarrollo Rural</h3>
+            </a>
             <div class="border-b border-dashed border-gray-400 flex-grow mx-2"></div>
             <span class="font-medium">69</span>
           </div>
           
           <div class="flex justify-between items-baseline ml-8">
-            <h3 class="font-medium text-lg">Educación, Arte y Cultura</h3>
+            <a @click.prevent="scrollToSection('educacion-arte-cultura-section')" href="#" class="hover:text-primary transition-colors duration-300 cursor-pointer flex items-center group">
+              <h3 class="font-medium text-lg group-hover:translate-x-1 transition-transform duration-300">Educación, Arte y Cultura</h3>
+            </a>
             <div class="border-b border-dashed border-gray-400 flex-grow mx-2"></div>
             <span class="font-medium">69</span>
           </div>
           
           <div class="flex justify-between items-baseline ml-8">
-            <h3 class="font-medium text-lg">Fomento Deportivo y Centro Acuático de Piedras Negras</h3>
+            <a @click.prevent="scrollToSection('fomento-deportivo-section')" href="#" class="hover:text-primary transition-colors duration-300 cursor-pointer flex items-center group">
+              <h3 class="font-medium text-lg group-hover:translate-x-1 transition-transform duration-300">Fomento Deportivo y Centro Acuático de Piedras Negras</h3>
+            </a>
             <div class="border-b border-dashed border-gray-400 flex-grow mx-2"></div>
             <span class="font-medium">70</span>
           </div>
           
           <div class="flex justify-between items-baseline">
-            <h3 class="font-bold text-xl">Objetivo Tejido Social Fuerte</h3>
+            <a @click.prevent="scrollToSection('objetivo-tejido-social-section')" href="#" class="hover:text-primary transition-colors duration-300 cursor-pointer flex items-center group">
+              <h3 class="font-bold text-xl group-hover:translate-x-1 transition-transform duration-300">Objetivo Tejido Social Fuerte</h3>
+            </a>
             <div class="border-b border-dashed border-gray-400 flex-grow mx-2"></div>
             <span class="font-bold">72</span>
           </div>
           
           <div class="flex justify-between items-baseline ml-8">
-            <h3 class="font-medium text-lg">Atención a la Juventud</h3>
+            <a @click.prevent="scrollToSection('atencion-juventud-objetivo-section')" href="#" class="hover:text-primary transition-colors duration-300 cursor-pointer flex items-center group">
+              <h3 class="font-medium text-lg group-hover:translate-x-1 transition-transform duration-300">Atención a la Juventud</h3>
+            </a>
             <div class="border-b border-dashed border-gray-400 flex-grow mx-2"></div>
             <span class="font-medium">72</span>
           </div>
           
           <div class="flex justify-between items-baseline ml-8">
-            <h3 class="font-medium text-lg">Desarrollo Rural</h3>
+            <a @click.prevent="scrollToSection('desarrollo-rural-objetivo-section')" href="#" class="hover:text-primary transition-colors duration-300 cursor-pointer flex items-center group">
+              <h3 class="font-medium text-lg group-hover:translate-x-1 transition-transform duration-300">Desarrollo Rural</h3>
+            </a>
             <div class="border-b border-dashed border-gray-400 flex-grow mx-2"></div>
             <span class="font-medium">72</span>
           </div>
           
           <div class="flex justify-between items-baseline ml-8">
-            <h3 class="font-medium text-lg">Educación, Arte y Cultura</h3>
+            <a @click.prevent="scrollToSection('educacion-arte-cultura-objetivo-section')" href="#" class="hover:text-primary transition-colors duration-300 cursor-pointer flex items-center group">
+              <h3 class="font-medium text-lg group-hover:translate-x-1 transition-transform duration-300">Educación, Arte y Cultura</h3>
+            </a>
             <div class="border-b border-dashed border-gray-400 flex-grow mx-2"></div>
             <span class="font-medium">72</span>
           </div>
           
           <div class="flex justify-between items-baseline ml-8">
-            <h3 class="font-medium text-lg">Educación, Arte y Cultura</h3>
-            <div class="border-b border-dashed border-gray-400 flex-grow mx-2"></div>
-            <span class="font-medium">72</span>
-          </div>
-          
-          <div class="flex justify-between items-baseline ml-8">
-            <h3 class="font-medium text-lg">Fomento Deportivo y Centro Acuático de Piedras Negras</h3>
+            <a @click.prevent="scrollToSection('fomento-deportivo-objetivo-section')" href="#" class="hover:text-primary transition-colors duration-300 cursor-pointer flex items-center group">
+              <h3 class="font-medium text-lg group-hover:translate-x-1 transition-transform duration-300">Fomento Deportivo y Centro Acuático de Piedras Negras</h3>
+            </a>
             <div class="border-b border-dashed border-gray-400 flex-grow mx-2"></div>
             <span class="font-medium">73</span>
           </div>
           
           <div class="flex justify-between items-baseline">
-            <h3 class="font-bold text-xl">Diagnostico Inclusión y Sanación Familiar</h3>
+            <a @click.prevent="scrollToSection('diagnostico-inclusion-section')" href="#" class="hover:text-primary transition-colors duration-300 cursor-pointer flex items-center group">
+              <h3 class="font-bold text-xl group-hover:translate-x-1 transition-transform duration-300">Diagnostico Inclusión y Sanación Familiar</h3>
+            </a>
             <div class="border-b border-dashed border-gray-400 flex-grow mx-2"></div>
             <span class="font-bold">74</span>
           </div>
           
           <div class="flex justify-between items-baseline">
-            <h3 class="font-bold text-xl">Objetivo Inclusión y Sanación Familiar</h3>
+            <a @click.prevent="scrollToSection('objetivo-inclusion-section')" href="#" class="hover:text-primary transition-colors duration-300 cursor-pointer flex items-center group">
+              <h3 class="font-bold text-xl group-hover:translate-x-1 transition-transform duration-300">Objetivo Inclusión y Sanación Familiar</h3>
+            </a>
             <div class="border-b border-dashed border-gray-400 flex-grow mx-2"></div>
             <span class="font-bold">77</span>
           </div>
           
           <div class="flex justify-between items-baseline">
-            <h3 class="font-bold text-xl">Diagnóstico Gobierno Digital</h3>
+            <a @click.prevent="scrollToSection('diagnostico-gobierno-digital-section')" href="#" class="hover:text-primary transition-colors duration-300 cursor-pointer flex items-center group">
+              <h3 class="font-bold text-xl group-hover:translate-x-1 transition-transform duration-300">Diagnóstico Gobierno Digital</h3>
+            </a>
             <div class="border-b border-dashed border-gray-400 flex-grow mx-2"></div>
             <span class="font-bold">80</span>
           </div>
           
           <div class="flex justify-between items-baseline">
-            <h3 class="font-bold text-xl">Diagnóstico Justicia a Grupos Vulnerables</h3>
+            <a @click.prevent="scrollToSection('diagnostico-justicia-section')" href="#" class="hover:text-primary transition-colors duration-300 cursor-pointer flex items-center group">
+              <h3 class="font-bold text-xl group-hover:translate-x-1 transition-transform duration-300">Diagnóstico Justicia a Grupos Vulnerables</h3>
+            </a>
             <div class="border-b border-dashed border-gray-400 flex-grow mx-2"></div>
             <span class="font-bold">82</span>
           </div>
           
           <div class="flex justify-between items-baseline">
-            <h3 class="font-bold text-xl">Objetivo Justicia a Grupos Vulnerables</h3>
+            <a @click.prevent="scrollToSection('objetivo-justicia-section')" href="#" class="hover:text-primary transition-colors duration-300 cursor-pointer flex items-center group">
+              <h3 class="font-bold text-xl group-hover:translate-x-1 transition-transform duration-300">Objetivo Justicia a Grupos Vulnerables</h3>
+            </a>
             <div class="border-b border-dashed border-gray-400 flex-grow mx-2"></div>
             <span class="font-bold">83</span>
           </div>
           
           <div class="flex justify-between items-baseline">
-            <h3 class="font-bold text-xl">Objetivos Gobierno Inteligente</h3>
+            <a @click.prevent="scrollToSection('objetivo-gobierno-digital-section')" href="#" class="hover:text-primary transition-colors duration-300 cursor-pointer flex items-center group">
+              <h3 class="font-bold text-xl group-hover:translate-x-1 transition-transform duration-300">Objetivos Gobierno Inteligente</h3>
+            </a>
             <div class="border-b border-dashed border-gray-400 flex-grow mx-2"></div>
             <span class="font-bold">83</span>
           </div>
           
           <div class="flex justify-between items-baseline">
-            <h3 class="font-bold text-xl">Líneas de Acción Gobernanza con Justicia y Participación Ciudadana</h3>
+            <a @click.prevent="scrollToSection('lineas-accion-gobernanza-section')" href="#" class="hover:text-primary transition-colors duration-300 cursor-pointer flex items-center group">
+              <h3 class="font-bold text-xl group-hover:translate-x-1 transition-transform duration-300">Líneas de Acción Gobernanza con Justicia y Participación Ciudadana</h3>
+            </a>
             <div class="border-b border-dashed border-gray-400 flex-grow mx-2"></div>
             <span class="font-bold">85</span>
           </div>
@@ -341,7 +397,9 @@
           </div>
           
           <div class="flex justify-between items-baseline">
-            <h3 class="font-bold text-xl">Líneas de Acción Desarrollo con Bienestar y Humanismo</h3>
+            <a @click.prevent="scrollToSection('lineas-accion-bienestar-section')" href="#" class="hover:text-primary transition-colors duration-300 cursor-pointer flex items-center group">
+              <h3 class="font-bold text-xl group-hover:translate-x-1 transition-transform duration-300">Líneas de Acción Desarrollo con Bienestar y Humanismo</h3>
+            </a>
             <div class="border-b border-dashed border-gray-400 flex-grow mx-2"></div>
             <span class="font-bold">89</span>
           </div>
@@ -365,7 +423,9 @@
           </div>
           
           <div class="flex justify-between items-baseline">
-            <h3 class="font-bold text-xl">Líneas de Acción Economía Moral y Trabajo</h3>
+            <a @click.prevent="scrollToSection('lineas-accion-economia-section')" href="#" class="hover:text-primary transition-colors duration-300 cursor-pointer flex items-center group">
+              <h3 class="font-bold text-xl group-hover:translate-x-1 transition-transform duration-300">Líneas de Acción Economía Moral y Trabajo</h3>
+            </a>
             <div class="border-b border-dashed border-gray-400 flex-grow mx-2"></div>
             <span class="font-bold">92</span>
           </div>
@@ -395,7 +455,9 @@
           </div>
           
           <div class="flex justify-between items-baseline">
-            <h3 class="font-bold text-xl">Líneas de Acción Ciudad Próspera y Conectada</h3>
+            <a @click.prevent="scrollToSection('lineas-accion-ciudad-section')" href="#" class="hover:text-primary transition-colors duration-300 cursor-pointer flex items-center group">
+              <h3 class="font-bold text-xl group-hover:translate-x-1 transition-transform duration-300">Líneas de Acción Ciudad Próspera y Conectada</h3>
+            </a>
             <div class="border-b border-dashed border-gray-400 flex-grow mx-2"></div>
             <span class="font-bold">97</span>
           </div>
@@ -419,7 +481,9 @@
           </div>
           
           <div class="flex justify-between items-baseline">
-            <h3 class="font-bold text-xl">Líneas de Acción Desarrollo Sustentable</h3>
+            <a @click.prevent="scrollToSection('lineas-accion-sustentable-section')" href="#" class="hover:text-primary transition-colors duration-300 cursor-pointer flex items-center group">
+              <h3 class="font-bold text-xl group-hover:translate-x-1 transition-transform duration-300">Líneas de Acción Desarrollo Sustentable</h3>
+            </a>
             <div class="border-b border-dashed border-gray-400 flex-grow mx-2"></div>
             <span class="font-bold">102</span>
           </div>
@@ -455,7 +519,9 @@
           </div>
           
           <div class="flex justify-between items-baseline">
-            <h3 class="font-bold text-xl">Líneas de Acción Derechos Humanos y Migración</h3>
+            <a @click.prevent="scrollToSection('lineas-accion-derechos-section')" href="#" class="hover:text-primary transition-colors duration-300 cursor-pointer flex items-center group">
+              <h3 class="font-bold text-xl group-hover:translate-x-1 transition-transform duration-300">Líneas de Acción Derechos Humanos y Migración</h3>
+            </a>
             <div class="border-b border-dashed border-gray-400 flex-grow mx-2"></div>
             <span class="font-bold">107</span>
           </div>
@@ -467,7 +533,9 @@
           </div>
           
           <div class="flex justify-between items-baseline">
-            <h3 class="font-bold text-xl">Líneas de Acción Igualdad Sustantiva y Derechos de las Mujeres</h3>
+            <a @click.prevent="scrollToSection('lineas-accion-igualdad-section')" href="#" class="hover:text-primary transition-colors duration-300 cursor-pointer flex items-center group">
+              <h3 class="font-bold text-xl group-hover:translate-x-1 transition-transform duration-300">Líneas de Acción Igualdad Sustantiva y Derechos de las Mujeres</h3>
+            </a>
             <div class="border-b border-dashed border-gray-400 flex-grow mx-2"></div>
             <span class="font-bold">108</span>
           </div>
@@ -479,7 +547,9 @@
           </div>
           
           <div class="flex justify-between items-baseline">
-            <h3 class="font-bold text-xl">Líneas de Acción Tejido Social Fuerte</h3>
+            <a @click.prevent="scrollToSection('lineas-accion-tejido-section')" href="#" class="hover:text-primary transition-colors duration-300 cursor-pointer flex items-center group">
+              <h3 class="font-bold text-xl group-hover:translate-x-1 transition-transform duration-300">Líneas de Acción Tejido Social Fuerte</h3>
+            </a>
             <div class="border-b border-dashed border-gray-400 flex-grow mx-2"></div>
             <span class="font-bold">110</span>
           </div>
@@ -509,7 +579,9 @@
           </div>
           
           <div class="flex justify-between items-baseline">
-            <h3 class="font-bold text-xl">Líneas de Acción Inclusión y Sanación Familiar</h3>
+            <a @click.prevent="scrollToSection('lineas-accion-inclusion-section')" href="#" class="hover:text-primary transition-colors duration-300 cursor-pointer flex items-center group">
+              <h3 class="font-bold text-xl group-hover:translate-x-1 transition-transform duration-300">Líneas de Acción Inclusión y Sanación Familiar</h3>
+            </a>
             <div class="border-b border-dashed border-gray-400 flex-grow mx-2"></div>
             <span class="font-bold">117</span>
           </div>
@@ -545,7 +617,9 @@
           </div>
           
           <div class="flex justify-between items-baseline">
-            <h3 class="font-bold text-xl">Líneas de Acción Justicia a Grupos Vulnerables</h3>
+            <a @click.prevent="scrollToSection('lineas-accion-justicia-section')" href="#" class="hover:text-primary transition-colors duration-300 cursor-pointer flex items-center group">
+              <h3 class="font-bold text-xl group-hover:translate-x-1 transition-transform duration-300">Líneas de Acción Justicia a Grupos Vulnerables</h3>
+            </a>
             <div class="border-b border-dashed border-gray-400 flex-grow mx-2"></div>
             <span class="font-bold">122</span>
           </div>
@@ -557,7 +631,9 @@
           </div>
           
           <div class="flex justify-between items-baseline">
-            <h3 class="font-bold text-xl">Líneas de Acción Gobierno Inteligente</h3>
+            <a @click.prevent="scrollToSection('lineas-accion-gobierno-section')" href="#" class="hover:text-primary transition-colors duration-300 cursor-pointer flex items-center group">
+              <h3 class="font-bold text-xl group-hover:translate-x-1 transition-transform duration-300">Líneas de Acción Gobierno Inteligente</h3>
+            </a>
             <div class="border-b border-dashed border-gray-400 flex-grow mx-2"></div>
             <span class="font-bold">123</span>
           </div>
