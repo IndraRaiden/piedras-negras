@@ -113,7 +113,7 @@
                 class="w-5 h-5 text-[#611232] mt-1"
               />
               <a
-                href="http://contupago.gob.mx/PUCC/#/contribuyente/cobropadron/2"
+                href="https://contupago.gob.mx/PUCC/#/pago-linea/obligaciones-padron/2"
                 target="_blank"
                 class="hover:text-[#611232] transition-colors"
               >
