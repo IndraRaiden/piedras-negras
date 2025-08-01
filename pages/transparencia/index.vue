@@ -39,6 +39,20 @@
           </a>
         </div>
 
+        <!-- Informes Trimestrales -->
+        <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300">
+          <div class="text-[#611232] mb-4">
+            <Icon name="mdi:chart-line" class="w-8 h-8" />
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-2">Informes Trimestrales</h3>
+          <p class="text-gray-600 mb-4">
+            Reportes periódicos detallados de la gestión financiera municipal.
+          </p>
+          <NuxtLink to="/transparencia/Informes-Trimestrales" class="text-[#611232] hover:text-[#4D0E28] font-medium">
+            Ver informes →
+          </NuxtLink>
+        </div>
+
         <!-- Gestion Financiera -->
         <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300">
           <div class="text-[#611232] mb-4">
