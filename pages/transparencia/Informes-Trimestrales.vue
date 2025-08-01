@@ -57,7 +57,7 @@
           <p class="text-gray-600 mb-4">
             Informe de Avance de Gestión Financiera del Instituto Municipal de Planeación.
           </p>
-          <a href="/files/outside/6. El IAGF en Archivo Digital en Formato PDF_acuse.pdf" target="_blank" class="text-[#611232] hover:text-[#4D0E28] font-medium">
+          <a href="/files/outside/6. El IAGF en Archivo Digital en Formato PDF_acuse_compressed.pdf" target="_blank" class="text-[#611232] hover:text-[#4D0E28] font-medium">
             Ver documento →
           </a>
         </div>
@@ -108,7 +108,7 @@ if (typeof window !== 'undefined') {
 const actasV3 = ref([
   {
     nombre: 'Oficio de Presentación 2T2025',
-    url: '/files/actasv3/Oficio de Presentación 2T2025_acuse.pdf'
+    url: '/files/actasv3/0. Oficio de Presentación 2T2025_acuse.pdf'
   },
   {
     nombre: 'I. Información Contable 2T2025',
@@ -124,7 +124,7 @@ const actasV3 = ref([
   },
   {
     nombre: 'IV. Información Adicional 2T2025',
-    url: '/files/actasv3/IV. Información Adicional 2T2025_compressed-compressed_compressed_compressed.pdf'
+    url: '/files/actasv3/IV. Información Adicional 2T2025.pdf'
   },
   {
     nombre: 'V. LDF 2T2025',
