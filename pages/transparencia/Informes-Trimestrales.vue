@@ -112,7 +112,7 @@ const actasV3 = ref([
   },
   {
     nombre: 'I. Información Contable 2T2025',
-    url: '/files/actasv3/I. Información Contable 2T2025_compressed_compressed.pdf'
+    url: '/files/actasv3/I. Información Contable 2T2025_compressed.pdf'
   },
   {
     nombre: 'II. Información Presupuestaria 2T2025',
