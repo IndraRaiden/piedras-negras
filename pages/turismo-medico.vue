@@ -1,17 +1,17 @@
 <template>
   <div class="container mx-auto px-4 py-8">
     <div class="flex flex-col items-center mb-8">
-      <img src="/images/turismo-medico/mainlogo.jpg" alt="Logo Turismo Médico" class="max-w-full h-auto mb-1" style="max-height: 120px;" />
-      <h1 class="text-center font-bold text-2xl md:text-3xl lg:text-4xl" style="max-width: 90%;">
+      <img src="/images/turismo-medico/mainlogo.jpg" alt="Logo Turismo Médico" class="max-w-full h-auto mb-1 max-h-[120px]" />
+      <h1 class="text-center font-bold text-2xl md:text-3xl lg:text-4xl max-w-[90%] mx-auto">
         <span class="block">RED OFICIAL DE PRESTADORES DE</span>
         <span class="block">SALUD DE EXCELENCIA EN TURISMO MÉDICO</span>
       </h1>
     </div>
     
     <section class="mb-12">
-      <h2 class="text-2xl font-semibold mb-4">Iniciativa municipal diseñada para capacitar, certificar y promover a los consultorios médicos, clínicas, hospitales y prácticas médicas privadas de Piedras Negras que deseen incursionar o fortalecer su oferta en turismo médico.</h2>
+      <h2 class="text-xl sm:text-2xl font-semibold mb-4">Iniciativa municipal diseñada para capacitar, certificar y promover a los consultorios médicos, clínicas, hospitales y prácticas médicas privadas de Piedras Negras que deseen incursionar o fortalecer su oferta en turismo médico.</h2>
       
-      <div class="bg-red-900 text-white p-6 rounded-lg mb-4" style="display: inline-block; width: auto;">
+      <div class="bg-red-900 text-white p-6 rounded-lg mb-4 inline-block">
         <p class="text-2xl font-bold mb-2">
           El programa se enfocará en dos áreas críticas:
         </p>
@@ -23,7 +23,7 @@
         </p>
       </div>
       
-      <div class="bg-red-900 text-white p-6 rounded-lg mb-8" style="display: inline-block; width: auto;">
+      <div class="bg-red-900 text-white p-6 rounded-lg mb-8 inline-block">
         <p class="text-xl font-semibold">
           La finalidad del programa es crear un ecosistema médico de excelencia, validado por un distintivo de
         </p>
@@ -34,8 +34,8 @@
     </section>
 
     <section class="mb-6">
-      <div class="grid md:grid-cols-3 gap-6 items-start">
-        <div class="md:col-span-2">
+      <div class="grid xl:grid-cols-3 gap-6 items-start">
+        <div class="xl:col-span-2">
           <div class="grid md:grid-cols-2 gap-6">
             <div class="flex items-start space-x-2">
               <div class="flex-shrink-0">
@@ -88,7 +88,7 @@
             </div>
           </div>
         </div>
-        <div class="flex md:justify-end self-start md:-mt-40 lg:-mt-56 xl:-mt-64">
+        <div class="flex self-start mt-8 md:mt-0 xl:justify-center 2xl:justify-end xl:col-span-3 2xl:col-span-1 2xl:-mt-64">
           <figure class="text-center">
             <img src="/images/turismo-medico/qr.jpg" alt="Código QR Turismo Médico" class="w-72 sm:w-80 md:w-96 lg:w-[28rem] xl:w-[32rem] max-w-full h-auto rounded-lg shadow-md mx-auto md:mx-0" />
             <div class="mt-4 text-center">

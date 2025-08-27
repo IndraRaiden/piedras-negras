@@ -53,7 +53,7 @@
                        transition-all duration-300 transform hover:-translate-y-0.5
                        relative overflow-hidden group"
               >
-                <span class="relative z-10">Salud De Excelencia en Turismo Médico</span>
+                <span class="relative z-10">Turismo Medico</span>
                 <div
                   class="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0
                          translate-x-[-100%] group-hover:translate-x-[100%]
