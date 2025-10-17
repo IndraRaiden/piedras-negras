@@ -94,10 +94,10 @@
               </a>
             </li>
             <li>
-              <a href="http://www2.icai.org.mx/ipo/dependencia.php?dep=84" target="_blank" rel="noopener noreferrer" 
+              <a href="https://www.coahuilatransparente.gob.mx/obligaciones/obligaciones.cfm?dep=20060025" target="_blank" rel="noopener noreferrer" 
                  class="text-white hover:text-white/80 transition-all duration-300 inline-flex items-center gap-2 group bg-white/10 p-2 rounded-lg hover:translate-x-2 w-full">
                 <Icon name="material-symbols:arrow-right-alt" class="group-hover:translate-x-1 transition-transform" />
-                Icai
+                Coahulia Transparente
               </a>
             </li>
             <li>
