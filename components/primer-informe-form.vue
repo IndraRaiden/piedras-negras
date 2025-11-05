@@ -126,39 +126,40 @@ const showSuccess = ref(false)
 const showError = ref(false)
 
 const handleSubmit = async () => {
-  isSubmitting.value = true
-  showSuccess.value = false
-  showError.value = false
+  isSubmitting.value = true;
+  showSuccess.value = false;
+  showError.value = false;
 
   try {
-    // Simulate API call - replace with actual endpoint
-    await new Promise(resolve => setTimeout(resolve, 1500))
-    
-    // TODO: Replace with actual API call
-    // const response = await fetch('/api/primer-informe/register', {
-    //   method: 'POST',
-    //   headers: { 'Content-Type': 'application/json' },
-    //   body: JSON.stringify(formData)
-    // })
+    const response = await fetch('https://formspree.io/f/xnnoedyv', {
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(formData),
+    });
 
-    showSuccess.value = true
-    
-    // Reset form after success
-    setTimeout(() => {
-      formData.fullName = ''
-      formData.plusOneFullName = ''
-      formData.phone = ''
-      formData.email = ''
-      showSuccess.value = false
-    }, 3000)
-    
+    if (response.ok) {
+      showSuccess.value = true;
+      // Reset form after success
+      setTimeout(() => {
+        formData.fullName = '';
+        formData.plusOneFullName = '';
+        formData.phone = '';
+        formData.email = '';
+        showSuccess.value = false;
+      }, 3000);
+    } else {
+      throw new Error('Form submission failed');
+    }
   } catch (error) {
-    console.error('Error submitting form:', error)
-    showError.value = true
+    console.error('Error submitting form:', error);
+    showError.value = true;
   } finally {
-    isSubmitting.value = false
+    isSubmitting.value = false;
   }
-}
+};
 </script>
 
 <style scoped>

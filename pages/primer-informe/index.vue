@@ -2,7 +2,7 @@
   <div class="relative h-screen w-full">
     <img src="/Fondo informe.png" alt="Fondo Informe" class="w-full h-full object-cover" />
     <div class="absolute inset-0 flex items-center justify-center">
-      <img src="/Logo Primer informe de resultados-02.png" alt="Logo Informe" class="w-2/3 h-auto max-w-3xl" />
+      <img src="/Logo Primer informe de resultados-02.png" alt="Logo Informe" class="w-5/6 h-auto max-w-5xl" />
     </div>
   </div>
   <div>
