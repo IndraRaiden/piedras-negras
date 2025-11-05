@@ -37,6 +37,15 @@
           </div>
         </div>
 
+        <!-- Dress Code -->
+        <div class="mt-12">
+          <div class="max-w-sm mx-auto bg-white rounded-lg shadow-lg p-6 text-center">
+            <h4 class="text-2xl font-bold text-[#7d2d4a] mb-4">Código de Vestimenta</h4>
+            <img src="/images/tuxedo-svgrepo-com.svg" alt="Tuxedo Icon" class="mx-auto mb-4 w-16 h-16" />
+            <p class="text-xl font-medium text-gray-800">Formal</p>
+          </div>
+        </div>
+
         <!-- Countdown Timer -->
         <div class="mt-12 text-center">
           <h4 class="text-2xl font-bold text-[#7d2d4a] mb-4">Tiempo restante para el evento</h4>

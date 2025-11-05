@@ -81,8 +81,7 @@
           required
           class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#7d2d4a] focus:border-transparent outline-none transition-all"
         >
-          <option>PENDIENTE</option>
-          <option>CONFIRMAR</option>
+                    <option>CONFIRMAR</option>
           <option>REPRESENTANTE</option>
           <option>CANCELAR/NO ASISTE</option>
         </select>
@@ -137,7 +136,7 @@ const formData = reactive({
   plusOneFullName: '',
   phone: '',
   email: '',
-  status: 'PENDIENTE'
+  status: 'CONFIRMAR'
 })
 
 const isSubmitting = ref(false)
@@ -167,7 +166,7 @@ const handleSubmit = async () => {
         formData.plusOneFullName = '';
         formData.phone = '';
         formData.email = '';
-        formData.status = 'PENDIENTE';
+        formData.status = 'CONFIRMAR';
         showSuccess.value = false;
       }, 3000);
     } else {
