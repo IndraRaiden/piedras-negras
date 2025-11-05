@@ -25,6 +25,20 @@
         />
       </div>
 
+      <!-- Plus One Full Name (Optional) -->
+      <div>
+        <label for="plusOneFullName" class="block text-sm font-semibold text-gray-700 mb-2">
+          Nombre Completo del Acompañante (Opcional)
+        </label>
+        <input
+          id="plusOneFullName"
+          v-model="formData.plusOneFullName"
+          type="text"
+          class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#7d2d4a] focus:border-transparent outline-none transition-all"
+          placeholder="Ingrese el nombre de su acompañante"
+        />
+      </div>
+
       <!-- Phone -->
       <div>
         <label for="phone" class="block text-sm font-semibold text-gray-700 mb-2">
@@ -102,6 +116,7 @@ import { ref, reactive } from 'vue'
 
 const formData = reactive({
   fullName: '',
+  plusOneFullName: '',
   phone: '',
   email: ''
 })
@@ -131,6 +146,7 @@ const handleSubmit = async () => {
     // Reset form after success
     setTimeout(() => {
       formData.fullName = ''
+      formData.plusOneFullName = ''
       formData.phone = ''
       formData.email = ''
       showSuccess.value = false
