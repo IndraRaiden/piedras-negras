@@ -70,6 +70,24 @@
         />
       </div>
 
+      <!-- Status -->
+      <div>
+        <label for="status" class="block text-sm font-semibold text-gray-700 mb-2">
+          Estatus <span class="text-red-500">*</span>
+        </label>
+        <select
+          id="status"
+          v-model="formData.status"
+          required
+          class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#7d2d4a] focus:border-transparent outline-none transition-all"
+        >
+          <option>PENDIENTE</option>
+          <option>CONFIRMAR</option>
+          <option>REPRESENTANTE</option>
+          <option>CANCELAR/NO ASISTE</option>
+        </select>
+      </div>
+
       <!-- Submit Button -->
       <div class="pt-4">
         <button
@@ -118,7 +136,8 @@ const formData = reactive({
   fullName: '',
   plusOneFullName: '',
   phone: '',
-  email: ''
+  email: '',
+  status: 'PENDIENTE'
 })
 
 const isSubmitting = ref(false)
@@ -148,6 +167,7 @@ const handleSubmit = async () => {
         formData.plusOneFullName = '';
         formData.phone = '';
         formData.email = '';
+        formData.status = 'PENDIENTE';
         showSuccess.value = false;
       }, 3000);
     } else {
