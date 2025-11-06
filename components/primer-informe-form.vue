@@ -94,7 +94,7 @@
           :disabled="isSubmitting"
           class="w-full bg-gradient-to-r from-[#7d2d4a] to-[#9d3d5a] text-white font-semibold py-3 px-6 rounded-lg hover:shadow-lg transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
         >
-          <span v-if="!isSubmitting">Confirmar Asistencia</span>
+          <span v-if="!isSubmitting">Enviar Respuesta</span>
           <span v-else class="flex items-center justify-center">
             <svg class="animate-spin h-5 w-5 mr-2" viewBox="0 0 24 24">
               <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4" fill="none"></circle>
