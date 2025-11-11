@@ -12,7 +12,7 @@
         <!-- Invitation Image -->
         <div class="mb-12">
           <img 
-            src="/primer-informe.jpg" 
+            src="/primer-informe2.0.jpg" 
             alt="Primer Informe de Resultados - Jacobo Rodríguez"
             class="w-full max-w-5xl mx-auto rounded-lg shadow-lg"
           />
