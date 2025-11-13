@@ -33,7 +33,7 @@ import BannerV2 from '~/components/BannerV2.vue'
 const documentos = ref([
   {
     nombre: 'Publicación Participaciones 2024',
-    url: '/files/news/PUBLICACION PARTICIPACIONES 2024_compressed.pdf',
+    url: '/files/news/PublicacionParticipaciones2024.pdf',
   }
 ])
 </script>

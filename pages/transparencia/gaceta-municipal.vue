@@ -37,7 +37,7 @@ import BannerV2 from '~/components/BannerV2.vue'
 const documentos = ref([
   {
     nombre: 'Gaceta Municipal 2025',
-    url: '/files/news/56997680-21704101NotaGacetaMunicipal20251 (1).pdf',
+    url: '/files/news/GacetaMunicipal2025.pdf',
     external: true
   }
 ])
