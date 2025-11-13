@@ -76,9 +76,9 @@
           <p class="text-gray-600 mb-4">
             Consulta las publicaciones oficiales del municipio.
           </p>
-          <div class="text-gray-400 font-medium cursor-not-allowed">
+          <NuxtLink to="/transparencia/gaceta-municipal" class="text-[#611232] hover:text-[#4D0E28] font-medium">
             Ver gaceta →
-          </div>
+          </NuxtLink>
         </div>
 
         <!-- Programa Anual de Adquisiciones -->
@@ -90,9 +90,9 @@
           <p class="text-gray-600 mb-4">
             Plan anual de compras y adquisiciones municipales.
           </p>
-          <div class="text-gray-400 font-medium cursor-not-allowed">
+          <NuxtLink to="/transparencia/adquisiciones" class="text-[#611232] hover:text-[#4D0E28] font-medium">
             Ver programa →
-          </div>
+          </NuxtLink>
         </div>
 
         <!-- Distribucion de Participaciones -->
@@ -104,9 +104,9 @@
           <p class="text-gray-600 mb-4">
             Información sobre la distribución de recursos federales y municipales.
           </p>
-          <div class="text-gray-400 font-medium cursor-not-allowed">
+          <NuxtLink to="/transparencia/distribucion-participaciones" class="text-[#611232] hover:text-[#4D0E28] font-medium">
             Ver distribución →
-          </div>
+          </NuxtLink>
         </div>
       </div>
     </div>

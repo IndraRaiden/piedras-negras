@@ -1,48 +1,17 @@
 <template>
   <div class="container mx-auto px-4 py-8">
-    <h1 class="text-3xl font-bold mb-6">Aviso de Privacidad</h1>
-    
-    <div class="prose max-w-none">
-      <p class="mb-4">
-        El H. Ayuntamiento de Piedras Negras, con domicilio en Monterrey S/N, Las Fuentes, 26010 Piedras Negras, Coahuila, es el responsable del tratamiento de los datos personales que nos proporcione.
-      </p>
-
-      <h2 class="text-2xl font-semibold mt-6 mb-4">Finalidades del tratamiento de datos personales</h2>
-      <p class="mb-4">
-        Sus datos personales serán utilizados para las siguientes finalidades:
-      </p>
-      <ul class="list-disc pl-6 mb-4">
-        <li>Prestación de servicios municipales</li>
-        <li>Atención a solicitudes y trámites</li>
-        <li>Comunicación de información relevante sobre programas y servicios municipales</li>
-        <li>Cumplimiento de obligaciones de transparencia</li>
-      </ul>
-
-      <h2 class="text-2xl font-semibold mt-6 mb-4">Datos personales recabados</h2>
-      <p class="mb-4">
-        Para las finalidades antes señaladas se recabarán los siguientes datos personales:
-      </p>
-      <ul class="list-disc pl-6 mb-4">
-        <li>Nombre completo</li>
-        <li>Domicilio</li>
-        <li>Teléfono</li>
-        <li>Correo electrónico</li>
-        <li>Y otros datos necesarios para el trámite específico</li>
-      </ul>
-
-      <h2 class="text-2xl font-semibold mt-6 mb-4">Derechos ARCO</h2>
-      <p class="mb-4">
-        Usted tiene derecho a conocer qué datos personales tenemos de usted, para qué los utilizamos y las condiciones del uso que les damos (Acceso). Asimismo, es su derecho solicitar la corrección de su información personal en caso de que esté desactualizada, sea inexacta o incompleta (Rectificación); que la eliminemos de nuestros registros o bases de datos cuando considere que la misma no está siendo utilizada conforme a los principios, deberes y obligaciones previstas en la normativa (Cancelación); así como oponerse al uso de sus datos personales para fines específicos (Oposición).
-      </p>
-
-      <h2 class="text-2xl font-semibold mt-6 mb-4">Cambios al aviso de privacidad</h2>
-      <p class="mb-4">
-        El presente aviso de privacidad puede sufrir modificaciones, cambios o actualizaciones. Nos comprometemos a mantenerlo informado sobre los cambios que pueda sufrir el presente aviso de privacidad, a través de nuestro sitio web oficial.
-      </p>
-
-      <p class="mt-8 text-sm text-gray-600">
-        Última actualización: Enero 2025
-      </p>
+    <h1 class="text-3xl font-bold mb-4">Aviso de Privacidad</h1>
+    <div class="prose max-w-none text-justify">
+      <p>El Republicano Ayuntamiento de Piedras Negras, Coahuila de Zaragoza con domicilio en Avenida 16 de Septiembre esquina con Calle Monterrey, S/n Colonia las Fuentes, C.P. 26010; con fundamento en el carácter de sujeto obligado y/o responsable de manejo, uso y protección de datos personales para los siguientes fines: El tratamiento de los datos personales de personas físicas y/o morales es para proveer aquellos servicios derivados de cualquier pago, y/o solicitud de trámite que realice a través de nuestra ventanilla universal y/o cualesquier otra departamento, así como a través de en las Plataforma del Gobierno Inteligente del Municipio y que se encuentran contenidas en la Ley de Ingresos para el Municipio de Piedras Negras, Coahuila, en los Reglamentos de los diversos departamentos del orden municipal.</p>
+      <h2 class="text-2xl font-semibold mt-6 mb-4">Datos personales sujetos a tratamiento</h2>
+      <p>Los datos personales que serán sometidos a tratamiento son los siguientes: Nombre, edad, domicilio, correo electrónico, teléfono; Clave Única de Registro de Población (CURP); Registro Federal de Contribuyentes (RFC); Escritura, Poder Notarial; Y los contenidos en los documentos presentados por el ciudadano interesado en la realización de los trámites, servicios y pagos a través de esta plataforma y/o personalmente, entre otros datos sensibles que la Unidad antes señalada determine, de acuerdo a lo establecido en los artículos artículos 6°, apartado A, fracciones I y II, 16 segundo párrafo de la Constitución Política de los Estados Unidos Mexicanos en relación con los los artículos 7 y 15 de la Ley de Protección de Datos Personales en Posesión de Sujetos Obligados del Estado de Coahuila de Zaragoza.</p>
+      <h2 class="text-2xl font-semibold mt-6 mb-4">Transferencias de datos</h2>
+      <p>Se informa que no se realizarán transferencias de datos personales, salvo aquellas que sean necesarias para atender requerimientos de información de una autoridad competente, que estén debidamente fundados y motivados.</p>
+      <h2 class="text-2xl font-semibold mt-6 mb-4">Consentimiento y negativa</h2>
+      <p>Los Datos Personales que se proporcionan en cada proceso específico son necesarios para iniciar su trámite, por lo que desde este momento el titular de los datos y/o representante legal otorga su consentimiento para que el Municipio realice el tratamiento de los mismos. En caso de existir la negativa de proporcionar los Datos Personales, no será posible iniciar el trámite.</p>
+      <p>Se le comunica que como usuario tiene usted el derecho de acceder a sus datos personales, así como rectificarlos en caso de ser inexactos o incompletos, cancelarlos cuando considere que resulten ser excesivos o innecesarios y oponerse al tratamiento de los mismos, mediante los derechos ARCO (Acceso, Rectificación, Cancelación y/u Oposición de datos personales); mediante solicitud presentada por escrito libre en la dirección Avenida Industrial s/n colonia Vista hermosa  Unidad de transparencia de este Municipio.</p>
+      <p>El presente Aviso de Privacidad está sujeto a cambios y modificaciones como consecuencia de las actualizaciones y reformas en el marco jurídico y disposiciones internas, por lo que puede cambiar o actualizarse periódicamente, por lo que le pedimos lo revise constantemente en la presente publicación, a fin de que pueda estar al tanto de la última versión que rige el tratamiento de tus datos personales, no obstante a lo anterior, el Aviso de Privacidad siempre deberá observar las disposiciones jurídicas aplicables.</p>
+      <p class="mt-8 text-sm text-gray-600">Última actualización: 2025</p>
     </div>
   </div>
 </template>
