@@ -32,7 +32,7 @@
 <script setup>
  import { computed } from 'vue'
  import BannerV2 from '~/components/BannerV2.vue'
- const { data, pending, error } = useFetch('/api/noviembre', { server: false, lazy: true })
+ const { data, pending, error } = await useFetch('/api/noviembre')
  const files = computed(() => (data.value?.files ?? []))
  useHead({
    title: 'Archivos Noviembre',
