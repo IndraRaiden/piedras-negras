@@ -33,25 +33,40 @@
           </div>
         </transition>
         <div class="book-spread" :class="{ 'page-turning': isAnimating }">
-          <div
-            v-if="currentPage > 1"
-            class="page-wrapper left-page"
-            :class="animationClass"
-            :ref="makePageRef(currentPage - 1)"
-            :key="'left-' + (currentPage - 1)"
-          >
-            <canvas :ref="makeCanvasRef(currentPage - 1)" class="page-canvas"></canvas>
-          </div>
-          <div v-else class="page-wrapper left-page empty-page" :key="'left-empty'"></div>
+          <!-- Mobile: Single page view -->
+          <template v-if="isMobile">
+            <div
+              class="page-wrapper single-page"
+              :class="animationClass"
+              :ref="makePageRef(currentPage)"
+              :key="'single-' + currentPage"
+            >
+              <canvas :ref="makeCanvasRef(currentPage)" class="page-canvas"></canvas>
+            </div>
+          </template>
           
-          <div
-            class="page-wrapper right-page"
-            :class="animationClass"
-            :ref="makePageRef(currentPage)"
-            :key="'right-' + currentPage"
-          >
-            <canvas :ref="makeCanvasRef(currentPage)" class="page-canvas"></canvas>
-          </div>
+          <!-- Desktop: Two page spread -->
+          <template v-else>
+            <div
+              v-if="currentPage > 1"
+              class="page-wrapper left-page"
+              :class="animationClass"
+              :ref="makePageRef(currentPage - 1)"
+              :key="'left-' + (currentPage - 1)"
+            >
+              <canvas :ref="makeCanvasRef(currentPage - 1)" class="page-canvas"></canvas>
+            </div>
+            <div v-else class="page-wrapper left-page empty-page" :key="'left-empty'"></div>
+            
+            <div
+              class="page-wrapper right-page"
+              :class="animationClass"
+              :ref="makePageRef(currentPage)"
+              :key="'right-' + currentPage"
+            >
+              <canvas :ref="makeCanvasRef(currentPage)" class="page-canvas"></canvas>
+            </div>
+          </template>
         </div>
       </div>
     </div>
@@ -82,6 +97,7 @@ const pagesContainer = ref(null);
 const renderedPages = new Set();
 const isAnimating = ref(false);
 const animationClass = ref('');
+const isMobile = ref(false);
 
 function makePageRef(pageNumber) {
   return (el) => {
@@ -123,6 +139,9 @@ async function renderPage(pageNumber) {
 }
 
 const pageIndicatorText = computed(() => {
+  if (isMobile.value) {
+    return `Página ${currentPage.value} de ${totalPages.value}`;
+  }
   if (currentPage.value === 1) {
     return `Página 1 de ${totalPages.value}`;
   }
@@ -134,8 +153,8 @@ async function renderCurrentSpread() {
   await nextTick();
   // Render current page (right side)
   await renderPage(currentPage.value);
-  // Render previous page (left side) if not first page
-  if (currentPage.value > 1) {
+  // Render previous page (left side) if not first page and not mobile
+  if (!isMobile.value && currentPage.value > 1) {
     await renderPage(currentPage.value - 1);
   }
 }
@@ -179,11 +198,17 @@ async function nextPage() {
   animationClass.value = 'slide-left';
   
   setTimeout(async () => {
-    if (currentPage.value === 1) {
-      // From first page, jump to page 3 (showing 2-3 spread)
-      currentPage.value = Math.min(3, totalPages.value);
+    if (isMobile.value) {
+      // Mobile: Move one page at a time
+      currentPage.value = Math.min(totalPages.value, currentPage.value + 1);
     } else {
-      currentPage.value = Math.min(totalPages.value, currentPage.value + 2);
+      // Desktop: Move two pages at a time
+      if (currentPage.value === 1) {
+        // From first page, jump to page 3 (showing 2-3 spread)
+        currentPage.value = Math.min(3, totalPages.value);
+      } else {
+        currentPage.value = Math.min(totalPages.value, currentPage.value + 2);
+      }
     }
     await renderCurrentSpread();
     
@@ -201,11 +226,17 @@ async function prevPage() {
   animationClass.value = 'slide-right';
   
   setTimeout(async () => {
-    if (currentPage.value === 2 || currentPage.value === 3) {
-      // Go back to first page
-      currentPage.value = 1;
+    if (isMobile.value) {
+      // Mobile: Move one page at a time
+      currentPage.value = Math.max(1, currentPage.value - 1);
     } else {
-      currentPage.value = Math.max(1, currentPage.value - 2);
+      // Desktop: Move two pages at a time
+      if (currentPage.value === 2 || currentPage.value === 3) {
+        // Go back to first page
+        currentPage.value = 1;
+      } else {
+        currentPage.value = Math.max(1, currentPage.value - 2);
+      }
     }
     await renderCurrentSpread();
     
@@ -225,9 +256,19 @@ async function changeZoom(delta) {
   await renderCurrentSpread();
 }
 
+function checkMobile() {
+  if (process.client) {
+    isMobile.value = window.innerWidth <= 768;
+  }
+}
+
 onMounted(async () => {
   try {
     if (!process.client) return;
+    
+    // Check if mobile
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
     
     const pdfModule = await import('pdfjs-dist/build/pdf.mjs');
     PDFJS = pdfModule;
@@ -247,6 +288,9 @@ onMounted(async () => {
 });
 
 onBeforeUnmount(() => {
+  if (process.client) {
+    window.removeEventListener('resize', checkMobile);
+  }
   if (pdfDocument) {
     pdfDocument.destroy();
   }
@@ -520,6 +564,10 @@ watch(() => props.pdf, () => {
   font-size: 1.1rem;
   border-left: 4px solid #dc3545;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.single-page {
+  border-radius: 8px;
 }
 
 @media (max-width: 1024px) {
