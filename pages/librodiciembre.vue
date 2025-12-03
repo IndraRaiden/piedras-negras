@@ -9,7 +9,7 @@
       <!-- PDF Viewer Card -->
       <div class="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
         <ClientOnly>
-          <PdfFlipbook pdf="/files/testing/BT-MM2XAR1-Manual-Tostadora.pdf" />
+          <PdfFlipbook pdf="/files/test2/INFORME V2-compressed.pdf" />
         </ClientOnly>
       </div>
     </div>
