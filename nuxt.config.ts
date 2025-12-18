@@ -5,5 +5,15 @@ export default defineNuxtConfig({
   modules: ['@nuxtjs/tailwindcss', 'nuxt-icon'],
   build: {
     transpile: ['lucide-vue-next']
+  },
+  nitro: {
+    routeRules: {
+      '/files/**/*.pdf': {
+        headers: {
+          'Content-Type': 'application/pdf',
+          'Content-Disposition': 'inline'
+        }
+      }
+    }
   }
 })

@@ -84,25 +84,33 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref, onMounted, onUnmounted } from 'vue'
 import BannerV2 from '~/components/BannerV2.vue'
 
 // Estado para el dropdown
 const dropdownOpen = ref(false)
 
 // Función para abrir/cerrar el dropdown
-const toggleDropdown = () => {
+const toggleDropdown = (event) => {
+  event.stopPropagation()
   dropdownOpen.value = !dropdownOpen.value
 }
 
-// Cerrar dropdown cuando se hace clic fuera
-if (typeof window !== 'undefined') {
-  window.addEventListener('click', (event) => {
-    if (!event.target.closest('.dropdown-container') && dropdownOpen.value) {
-      dropdownOpen.value = false
-    }
-  })
+// Función para cerrar dropdown cuando se hace clic fuera
+const handleClickOutside = (event) => {
+  if (!event.target.closest('.dropdown-container') && dropdownOpen.value) {
+    dropdownOpen.value = false
+  }
 }
+
+// Agregar y remover event listener correctamente
+onMounted(() => {
+  document.addEventListener('click', handleClickOutside)
+})
+
+onUnmounted(() => {
+  document.removeEventListener('click', handleClickOutside)
+})
 
 // Archivos de actasv3
 const actasV3 = ref([
