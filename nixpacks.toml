@@ -1,0 +1,14 @@
+[phases.setup]
+nixPkgs = ["nodejs-20_x"]
+
+[phases.install]
+cmds = [
+  "rm -rf node_modules package-lock.json",
+  "npm install --legacy-peer-deps"
+]
+
+[phases.build]
+cmds = ["npm run build"]
+
+[start]
+cmd = "node .output/server/index.mjs"
