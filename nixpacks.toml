@@ -1,10 +1,14 @@
+[variables]
+NIXPACKS_NODE_VERSION = "23"
+
 [phases.setup]
-nixPkgs = ["nodejs_20"]
+nixPkgs = ["nodejs_23"]
 
 [phases.install]
 cmds = [
   "rm -rf node_modules",
-  "npm ci --legacy-peer-deps"
+  "npm ci --legacy-peer-deps",
+  "npm i --no-save @oxc-parser/binding-linux-x64-gnu@0.102.0 @oxc-transform/binding-linux-x64-gnu@0.102.0 @oxc-minify/binding-linux-x64-gnu@0.102.0"
 ]
 
 [phases.build]
