@@ -7,8 +7,9 @@ nixPkgs = ["nodejs_23"]
 [phases.install]
 cmds = [
   "rm -rf node_modules",
-  "npm ci --legacy-peer-deps",
-  "npm i --no-save @oxc-parser/binding-linux-x64-gnu@0.102.0 @oxc-transform/binding-linux-x64-gnu@0.102.0 @oxc-minify/binding-linux-x64-gnu@0.102.0"
+  "npm ci --legacy-peer-deps --ignore-scripts",
+  "npm i --no-save --no-package-lock @oxc-parser/binding-linux-x64-gnu@0.102.0 @oxc-transform/binding-linux-x64-gnu@0.102.0 @oxc-minify/binding-linux-x64-gnu@0.102.0",
+  "npm run postinstall"
 ]
 
 [phases.build]
