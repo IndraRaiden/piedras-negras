@@ -69,7 +69,7 @@ export default defineEventHandler(async (event) => {
 
   // HEAD: just headers
   if (method === 'HEAD') {
-    setHeader(event, 'Content-Length', String(totalSize))
+    setHeader(event, 'Content-Length', totalSize)
     event.node.res.statusCode = 200
     return ''
   }
@@ -92,7 +92,7 @@ export default defineEventHandler(async (event) => {
 
       event.node.res.statusCode = 206
       setHeader(event, 'Content-Range', `bytes ${start}-${clampedEnd}/${totalSize}`)
-      setHeader(event, 'Content-Length', String(chunkSize))
+      setHeader(event, 'Content-Length', chunkSize)
 
       return send(event, createReadStream(filePath, { start, end: clampedEnd }))
     }
