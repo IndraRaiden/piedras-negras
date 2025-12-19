@@ -1,0 +1,14 @@
+[variables]
+NIXPACKS_NODE_VERSION = "23"
+
+[phases.setup]
+nixPkgs = ["nodejs_23"]
+
+[phases.install]
+cmds = ["rm -rf node_modules", "npm ci --legacy-peer-deps"]
+
+[phases.build]
+cmds = ["npm run build"]
+
+[start]
+cmd = "node .output/server/index.mjs"
