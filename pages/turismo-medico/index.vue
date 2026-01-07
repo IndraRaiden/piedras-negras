@@ -100,6 +100,12 @@
         </div>
       </div>
     </section>
+
+    <div class="flex justify-center mt-12 mb-8">
+      <NuxtLink to="/turismo-medico/medicos-registrados" class="inline-block px-8 py-4 bg-red-900 text-white text-xl font-bold rounded-lg shadow-lg hover:bg-red-800 transition-colors duration-200 focus:outline-none focus:ring-4 focus:ring-red-700">
+        Ver Médicos Registrados
+      </NuxtLink>
+    </div>
   
   </div>
 </template>
