@@ -6,7 +6,6 @@
     />
     <div class="container mx-auto px-4 py-8">
       <div class="max-w-4xl mx-auto">
-        <ClientOnly>
           <div class="grid gap-6">
             <div 
               v-for="(doc, index) in documents" 
@@ -44,7 +43,6 @@
               </a>
             </div>
           </div>
-        </ClientOnly>
       </div>
     </div>
 
