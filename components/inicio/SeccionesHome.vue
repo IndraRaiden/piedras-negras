@@ -54,7 +54,8 @@
                                         <img v-if="section.image" :src="section.image" 
                                              :alt="section.title"
                                              class="w-full h-full object-contain p-3"
-                                             loading="lazy" />
+                                             loading="lazy"
+                                             decoding="async" />
                                         <Icon v-else :name="section.icon" class="text-[#611232] w-12 h-12 m-auto flex items-center justify-center h-full" />
                                     </div>
                                 </div>
@@ -104,7 +105,8 @@
                                     <img v-if="section.image" :src="section.image" 
                                          :alt="section.title"
                                          class="w-full h-full object-contain p-3"
-                                         loading="lazy" />
+                                         loading="lazy"
+                                         decoding="async" />
                                     <Icon v-else :name="section.icon" class="text-[#611232] w-12 h-12 m-auto flex items-center justify-center h-full" />
                                 </div>
                             </div>
