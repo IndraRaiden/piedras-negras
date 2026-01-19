@@ -42,6 +42,8 @@
                   src="/images/iconos_secciones/Dispensario_medico_guindo.png"
                   alt="Salud De Excelencia en Turismo Médico"
                   class="block w-48 h-48 object-contain group-hover:scale-110 transition-all duration-500"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
               <!-- Botón de la tarjeta Turismo Médico -->
@@ -95,6 +97,8 @@
                   src="~/public/images/iconos_secciones/Atencion_ciudadana_guindo.png"
                   alt="Atención Ciudadana"
                   class="block w-48 h-48 object-contain group-hover:scale-110 transition-all duration-500"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
               <!-- Botón de la tarjeta izquierda -->
@@ -150,6 +154,8 @@
                   alt="Bienestar"
                   class="block w-48 h-48 object-contain 
                          group-hover:scale-110 transition-all duration-500"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
               <!-- Botón de la tarjeta derecha -->
@@ -202,6 +208,8 @@
                   src="~/public/images/iconos_secciones/Obras_publicas_guindo.png"
                   alt="Plan Municipal de Desarrollo"
                   class="block w-48 h-48 object-contain group-hover:scale-110 transition-all duration-500"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
               <!-- Botón de la tarjeta Plan de Desarrollo -->

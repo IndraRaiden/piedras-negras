@@ -57,6 +57,8 @@
                   :src="news.banner?.url"
                   :alt="news.title"
                   class="w-full h-full object-cover"
+                  loading="lazy"
+                  decoding="async"
                   onerror="this.style.display='none'"
                 />
               </div>

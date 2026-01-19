@@ -19,6 +19,10 @@
     <div v-else-if="firstBanner || (allBannersLoaded && banners.length > 0)" class="relative w-full h-full">
       <!-- Show first banner until all banners are loaded -->
       <div v-if="firstBanner && !allBannersLoaded" class="absolute inset-0">
+        <div
+          v-show="!firstImageLoaded"
+          class="absolute inset-0 bg-gradient-to-br from-black/20 via-black/10 to-black/20 animate-pulse"
+        ></div>
         <picture>
           <!-- Mobile devices -->
           <source
@@ -37,49 +41,56 @@
           >
           <!-- Fallback image -->
           <img 
-            :src="firstBanner.image.url" 
+            :src="firstBanner.image.url + '?w=1920'" 
             :alt="firstBanner.image.alt"
-            class="w-full h-full object-cover object-center"
+            class="w-full h-full object-cover object-center transition-opacity duration-300"
+            :class="firstImageLoaded ? 'opacity-100' : 'opacity-0'"
             loading="eager"
             fetchpriority="high"
+            decoding="async"
+            @load="firstImageLoaded = true"
+            @error="firstImageLoaded = true"
           />
         </picture>
       </div>
       
       <!-- All Banners (lazy loaded) -->
-      <TransitionGroup v-if="allBannersLoaded && banners.length > 0" name="fade">
-        <div 
-          v-for="(banner, index) in banners" 
-          :key="banner.id"
-          v-show="currentIndex === index"
-          class="absolute inset-0"
-        >
+      <Transition v-if="allBannersLoaded && currentBanner" name="fade" mode="out-in">
+        <div :key="currentBanner.id" class="absolute inset-0">
+          <div
+            v-show="!bannerImageLoaded[currentBanner.id]"
+            class="absolute inset-0 bg-gradient-to-br from-black/20 via-black/10 to-black/20 animate-pulse"
+          ></div>
           <picture>
             <!-- Mobile devices -->
             <source
               media="(max-width: 639px)"
-              :srcset="banner.image.url + '?w=640'"
+              :srcset="currentBanner.image.url + '?w=640'"
             >
             <!-- Tablets -->
             <source
               media="(min-width: 640px) and (max-width: 1023px)"
-              :srcset="banner.image.url + '?w=1024'"
+              :srcset="currentBanner.image.url + '?w=1024'"
             >
             <!-- Desktop -->
             <source
               media="(min-width: 1024px)"
-              :srcset="banner.image.url + '?w=1920'"
+              :srcset="currentBanner.image.url + '?w=1920'"
             >
             <!-- Fallback image -->
             <img 
-              :src="banner.image.url" 
-              :alt="banner.image.alt"
-              class="w-full h-full object-cover object-center"
-              :loading="index === 0 ? 'eager' : 'lazy'"
+              :src="currentBanner.image.url + '?w=1920'" 
+              :alt="currentBanner.image.alt"
+              class="w-full h-full object-cover object-center transition-opacity duration-300"
+              :class="bannerImageLoaded[currentBanner.id] ? 'opacity-100' : 'opacity-0'"
+              loading="eager"
+              decoding="async"
+              @load="bannerImageLoaded[currentBanner.id] = true"
+              @error="bannerImageLoaded[currentBanner.id] = true"
             />
           </picture>
         </div>
-      </TransitionGroup>
+      </Transition>
       
       <!-- Navigation dots (only show if there's more than one banner) -->
       <div v-if="banners.length > 1" class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-1.5">
@@ -97,7 +108,7 @@
 </template>
 
 <script setup>
-import { ref, onMounted, onUnmounted, watchEffect } from 'vue'
+import { computed, ref, onMounted, onUnmounted, watch } from 'vue'
 
 // State for loading phases
 const initialLoading = ref(true)
@@ -106,7 +117,35 @@ const firstBanner = ref(null)
 const banners = ref([])
 const currentIndex = ref(0)
 const error = ref(null)
+const firstImageLoaded = ref(false)
+const bannerImageLoaded = ref({})
 let intervalId = null
+
+const currentBanner = computed(() => {
+  if (!allBannersLoaded.value) return null
+  if (!banners.value?.length) return null
+  return banners.value[currentIndex.value] ?? null
+})
+
+const prefetchNextBannerImage = () => {
+  if (typeof window === 'undefined') return
+  if (!allBannersLoaded.value || banners.value.length < 2) return
+
+  const nextIndex = (currentIndex.value + 1) % banners.value.length
+  const nextBanner = banners.value[nextIndex]
+  if (!nextBanner?.id || !nextBanner?.image?.url) return
+  if (bannerImageLoaded.value[nextBanner.id]) return
+
+  const img = new Image()
+  img.decoding = 'async'
+  img.onload = () => {
+    bannerImageLoaded.value[nextBanner.id] = true
+  }
+  img.onerror = () => {
+    bannerImageLoaded.value[nextBanner.id] = true
+  }
+  img.src = nextBanner.image.url + '?w=1920'
+}
 
 // First, load only the first banner with high priority
 const loadFirstBanner = async () => {
@@ -117,6 +156,7 @@ const loadFirstBanner = async () => {
       error.value = fetchError.value
     } else if (bannerData.value && bannerData.value.length > 0) {
       firstBanner.value = bannerData.value[0]
+      firstImageLoaded.value = false
     }
   } catch (err) {
     console.error('Error loading first banner:', err)
@@ -135,6 +175,7 @@ const loadAllBanners = async () => {
       error.value = fetchError.value
     } else if (bannerData.value) {
       banners.value = bannerData.value
+      bannerImageLoaded.value = {}
       
       // Set the current index to 0 to ensure we start with the first banner
       currentIndex.value = 0
@@ -169,14 +210,21 @@ const startRotation = () => {
 }
 
 // Load the first banner immediately
-loadFirstBanner()
-
-// Load all banners after the component is mounted
 onMounted(() => {
+  loadFirstBanner()
+
   // Use setTimeout to defer loading until after the initial render
   setTimeout(() => {
     loadAllBanners()
   }, 200) // Small delay to ensure first banner is displayed first
+})
+
+watch(currentIndex, () => {
+  prefetchNextBannerImage()
+})
+
+watch(allBannersLoaded, (loaded) => {
+  if (loaded) prefetchNextBannerImage()
 })
 
 // Clean up interval when component is unmounted

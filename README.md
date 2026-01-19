@@ -2,22 +2,29 @@
 
 Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
 
-## Setup
+## Prerequisites
 
-Make sure to install dependencies:
+Make sure you have:
 
 ```bash
-# npm
-npm install
+# Git LFS (required for PDFs in public/files)
+git lfs version
 
-# pnpm
-pnpm install
+# Node.js + npm (this repo is deployed with Node 23 via nixpacks.toml)
+node -v
+npm -v
+```
 
-# yarn
-yarn install
+## Setup
 
-# bun
-bun install
+This repo stores PDFs with Git LFS, so after cloning you must pull LFS objects before running the app.
+
+```bash
+git lfs install
+git lfs pull
+
+# Install dependencies (lockfile present)
+npm ci --legacy-peer-deps
 ```
 
 ## Development Server

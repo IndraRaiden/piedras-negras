@@ -36,6 +36,8 @@
                       :src="paginatedNews[0].banner?.url"
                       :alt="paginatedNews[0].title"
                       class="w-full h-full object-cover"
+                      loading="lazy"
+                      decoding="async"
                       onerror="this.src='/img/placeholder.jpg'"
                     />
                   </div>
@@ -79,6 +81,8 @@
                         :src="news.banner?.url"
                         :alt="news.title"
                         class="w-full h-full object-cover"
+                        loading="lazy"
+                        decoding="async"
                         onerror="this.src='/img/placeholder.jpg'"
                       />
                     </div>
@@ -157,7 +161,7 @@ interface NewsResponse {
 }
 
 // Fetch de noticias
-const { data: newsData, pending, error } = await useFetch<NewsResponse>('/api/news')
+const { data: newsData, pending, error } = useFetch<NewsResponse>('/api/news', { lazy: true, server: false })
 
 // Mapeamos la data
 const mappedNews = computed(() => {
