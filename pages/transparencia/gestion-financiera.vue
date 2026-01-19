@@ -24,6 +24,18 @@
 
     <div class="container mx-auto px-4 py-8">
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Sección de Presupuesto 2026 -->
+        <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300">
+          <div class="text-[#611232] mb-4">
+            <Icon name="mdi:cash-plus" class="w-8 h-8" />
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-2">Proceso Presupuestario 2026</h3>
+          <p class="text-gray-600 mb-4">Información actualizada del presupuesto municipal 2026.</p>
+          <NuxtLink to="/transparencia/proceso-presupuestario-2026" class="text-[#611232] hover:text-[#4D0E28] font-medium">
+            Ver más →
+          </NuxtLink>
+        </div>
+
         <!-- Sección de Presupuesto -->
         <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300">
           <div class="text-[#611232] mb-4">
