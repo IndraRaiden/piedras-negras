@@ -119,7 +119,7 @@ const handleSubmit = async () => {
   showError.value = false;
 
   try {
-    const response = await fetch('https://formspree.io/f/xnnoedyv', {
+    const response = await fetch('https://formspree.io/f/mpqjwyyn', {
       method: 'POST',
       headers: {
         'Accept': 'application/json',
