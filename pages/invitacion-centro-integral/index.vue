@@ -2,7 +2,7 @@
   <div class="relative h-screen w-full">
     <img src="/Fondo informe.png" alt="Fondo Informe" class="w-full h-full object-cover" />
     <div class="absolute inset-0 flex items-center justify-center p-4">
-      <img src="/images/imagen_invitacion/imagen%20font%20invitacion.jpeg" alt="Logo Informe" class="w-full h-auto transform scale-150" />
+      <img src="/images/imagen_invitacion/imagen%20font%20invitacion.jpeg" alt="Logo Informe" class="h-[92vh] md:h-[98vh] w-auto max-w-full mx-auto object-contain" />
     </div>
   </div>
   <div>
