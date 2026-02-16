@@ -1,6 +1,6 @@
 <!-- app.vue -->
 <template>
-  <div class="min-h-screen overflow-x-hidden">
+  <div class="min-h-screen">
     <EnConstruccion v-if="mostrarEnConstruccion" />
     <div v-else class="flex flex-col min-h-screen">
       <Navbar />
@@ -50,16 +50,7 @@ onMounted(() => {
 
 <style>
 html, body {
-  overflow-x: hidden;
-  position: relative;
-  width: 100%;
   -webkit-text-size-adjust: 100%;
-  touch-action: manipulation;
-}
-
-/* Prevent pull-to-refresh on mobile */
-body {
-  overscroll-behavior-y: none;
 }
 
 /* Improve tap target sizes on mobile */

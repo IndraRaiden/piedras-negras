@@ -312,7 +312,6 @@ const socialLinks = [
 // Toggle menu
 const toggleMenu = () => {
   isMenuOpen.value = !isMenuOpen.value
-  document.body.style.overflow = isMenuOpen.value ? 'hidden' : ''
 }
 
 const toggleSubmenu = (menuName) => {
@@ -339,14 +338,16 @@ onMounted(() => {
   })
 })
 
+// Manage body overflow based on menu state
+watch(isMenuOpen, (isOpen) => {
+  document.body.style.overflow = isOpen ? 'hidden' : ''
+})
+
 // Close menu on route change
 watch(
   () => route.path,
   () => {
-    if (isMenuOpen.value) {
-      isMenuOpen.value = false
-      document.body.style.overflow = ''
-    }
+    isMenuOpen.value = false
     openSubmenu.value = null
   }
 )
