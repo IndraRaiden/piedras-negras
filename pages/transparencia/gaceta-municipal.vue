@@ -39,6 +39,11 @@ const documentos = ref([
     nombre: 'Gaceta Municipal 2025',
     url: '/files/news/GacetaMunicipal2025.pdf',
     external: true
+  },
+  {
+    nombre: 'CECI ACOROS',
+    url: '/files/news/CECI ACOROS.pdf',
+    external: true
   }
 ])
 </script>
