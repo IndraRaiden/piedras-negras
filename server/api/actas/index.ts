@@ -2,7 +2,7 @@ import { defineEventHandler } from 'h3'
 import fs from 'fs'
 import path from 'path'
 
-export default defineEventHandler(async () => {
+export default defineCachedEventHandler(async () => {
   try {
     // Path to the actas directory
     const actasDir = path.join(process.cwd(), 'public', 'files', 'actas')
@@ -33,11 +33,15 @@ export default defineEventHandler(async () => {
   } catch (err) {
     const error = err as Error
     console.error('Error reading actas directory:', error)
-    return { 
+    return {
       error: 'Failed to read actas directory',
       files: []
     }
   }
+}, {
+  maxAge: 60, // re-scan the actas directory at most once per minute
+  name: 'actas-list',
+  getKey: () => 'actas-list'
 })
 
 // Helper function to extract metadata from filename

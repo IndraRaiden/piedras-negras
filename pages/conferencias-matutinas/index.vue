@@ -95,7 +95,7 @@ const checkLiveStream = async () => {
 
 onMounted(() => {
   checkLiveStream() // Initial check
-  checkInterval = setInterval(checkLiveStream, 60000) // Check every minute
+  checkInterval = setInterval(checkLiveStream, 300000) // Check every 5 minutes (server caches for 5 min)
 })
 
 onBeforeUnmount(() => {

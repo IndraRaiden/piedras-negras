@@ -1,7 +1,41 @@
 import { createTransport } from 'nodemailer'
+import { getRequestIP } from 'h3'
 import { useRuntimeConfig } from '#imports'
 
+// --- Basic in-memory rate limiting (per server process) ---
+// Stops bots from abusing this public mail form to fire off unlimited emails,
+// which can spike CPU/outbound traffic and get the server flagged for abuse.
+const RATE_LIMIT_WINDOW_MS = 10 * 60 * 1000 // 10 minutes
+const RATE_LIMIT_MAX = 5 // max submissions per IP per window
+const submissionLog = new Map<string, number[]>()
+
+function isRateLimited(ip: string): boolean {
+  const now = Date.now()
+  const recent = (submissionLog.get(ip) || []).filter((t) => now - t < RATE_LIMIT_WINDOW_MS)
+  recent.push(now)
+  submissionLog.set(ip, recent)
+
+  // Occasional cleanup so the map can't grow unbounded.
+  if (submissionLog.size > 5000) {
+    for (const [key, times] of submissionLog) {
+      if (times.every((t) => now - t >= RATE_LIMIT_WINDOW_MS)) submissionLog.delete(key)
+    }
+  }
+
+  return recent.length > RATE_LIMIT_MAX
+}
+
 export default defineEventHandler(async (event) => {
+  // Rate-limit BEFORE the try block so the 429 isn't swallowed and turned into a 500.
+  const ip = getRequestIP(event, { xForwardedFor: true }) || 'unknown'
+  if (isRateLimited(ip)) {
+    throw createError({
+      statusCode: 429,
+      statusMessage: 'Too Many Requests',
+      message: 'Demasiadas solicitudes. Por favor, intenta de nuevo en unos minutos.'
+    })
+  }
+
   try {
     const config = useRuntimeConfig()
     const body = await readBody(event)

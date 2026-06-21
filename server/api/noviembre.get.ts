@@ -2,7 +2,7 @@ import { defineEventHandler } from 'h3'
 import { readdir, stat } from 'node:fs/promises'
 import { join } from 'node:path'
 
-export default defineEventHandler(async () => {
+export default defineCachedEventHandler(async () => {
   try {
     const dir = join(process.cwd(), 'public', 'files', 'noviembre')
     const entries = await readdir(dir, { withFileTypes: true })
@@ -28,4 +28,8 @@ export default defineEventHandler(async () => {
   } catch (e) {
     return { files: [] }
   }
+}, {
+  maxAge: 60, // re-scan the directory at most once per minute
+  name: 'noviembre-list',
+  getKey: () => 'noviembre-list'
 })
