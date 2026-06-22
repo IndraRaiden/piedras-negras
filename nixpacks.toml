@@ -1,8 +1,10 @@
 [variables]
-NIXPACKS_NODE_VERSION = "23"
+# Node 22 LTS — supported with security patches into 2027.
+# (Was "23", an odd-numbered non-LTS release that reached End-of-Life in 2025.)
+NIXPACKS_NODE_VERSION = "22"
 
 [phases.setup]
-nixPkgs = ["nodejs_23", "git-lfs"]
+nixPkgs = ["nodejs_22", "git-lfs"]
 
 [phases.install]
 cmds = [

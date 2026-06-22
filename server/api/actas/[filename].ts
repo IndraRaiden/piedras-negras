@@ -11,11 +11,24 @@ export default defineEventHandler(async (event) => {
     event.node.res.statusCode = 400
     return { error: 'Filename is required' }
   }
-  
+
+  // Block path traversal: only allow a plain filename, never a path.
+  if (filename.includes('/') || filename.includes('\\') || filename.includes('..')) {
+    event.node.res.statusCode = 400
+    return { error: 'Invalid filename' }
+  }
+
   try {
     // Construct the path to the PDF file
-    const filePath = path.join(process.cwd(), 'public', 'files', 'actas', filename)
-    
+    const actasRoot = path.resolve(process.cwd(), 'public', 'files', 'actas')
+    const filePath = path.resolve(actasRoot, filename)
+
+    // Make sure the resolved path is still inside the actas directory.
+    if (filePath !== actasRoot && !filePath.startsWith(actasRoot + path.sep)) {
+      event.node.res.statusCode = 400
+      return { error: 'Invalid filename' }
+    }
+
     // Check if the file exists
     if (!fs.existsSync(filePath)) {
       console.error(`File not found: ${filePath}`)
