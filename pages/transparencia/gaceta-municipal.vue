@@ -60,7 +60,7 @@ import BannerV2 from '~/components/BannerV2.vue'
 const documentos = ref([
   {
     nombre: 'Gaceta Edición 2025',
-    url: '/files/newgazeta/GACETA EDICIÓN 2025.pdf',
+    url: '/files/newgazeta/gaceta-edicion-2025.pdf',
     inline: true
   },
   {
