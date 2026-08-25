@@ -76,6 +76,10 @@ const documents = [
     path: '/filesago2026/SISTEMA EN PREVENCION ALARMAS SA DE CV_08142026_112146_opt_compressed.pdf'
   },
   {
+    name: 'TCSI SA DE CV',
+    path: '/filesago2026/TCSI SA DE CV_07072026_032348_opt.pdf'
+  },
+  {
     name: 'Publicación de Participaciones 2024',
     path: '/filesago2026/PUBLICACION PARTICIPACIONES 2024_compressed.pdf'
   },
