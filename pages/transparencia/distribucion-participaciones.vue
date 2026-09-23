@@ -32,6 +32,14 @@ import BannerV2 from '~/components/BannerV2.vue'
 
 const documentos = ref([
   {
+    nombre: 'Publicación Participaciones 2026',
+    url: '/files/docsseptember2026/publicacion-participaciones-2026.pdf',
+  },
+  {
+    nombre: 'Publicación Participaciones 2025',
+    url: '/files/news/PublicacionParticipaciones2025.pdf',
+  },
+  {
     nombre: 'Publicación Participaciones 2024',
     url: '/files/news/PublicacionParticipaciones2024.pdf',
   }

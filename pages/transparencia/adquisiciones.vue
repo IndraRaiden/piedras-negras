@@ -36,8 +36,8 @@ import BannerV2 from '~/components/BannerV2.vue'
 
 const documentos = ref([
   {
-    nombre: 'Publicación Participaciones 2025',
-    url: '/files/news/PublicacionParticipaciones2025.pdf',
+    nombre: 'Programa Anual de Adquisiciones 2025',
+    url: '/files/docsseptember2026/programa-anual-adquisiciones-2025.pdf',
     external: true
   }
 ])
