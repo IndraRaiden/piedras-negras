@@ -59,6 +59,16 @@ import BannerV2 from '~/components/BannerV2.vue'
 
 const documentos = ref([
   {
+    nombre: 'Certificación de Publicación y Entrada en Vigor del Reglamento de Salones de Fiestas, Quintas y Centros Sociales',
+    url: '/files/docspedrooct2026/certificacion-reglamento-salones-fiestas.pdf',
+    inline: true
+  },
+  {
+    nombre: 'Periódico Oficial No. 77, 25 de septiembre de 2026 - Reglamento de Salones de Fiestas, Quintas y Centros Sociales',
+    url: '/files/docspedrooct2026/periodico-oficial-77-25-sep-2026.pdf',
+    inline: true
+  },
+  {
     nombre: 'Gaceta Edición 2025',
     url: '/files/newgazeta/gaceta-edicion-2025.pdf',
     inline: true
