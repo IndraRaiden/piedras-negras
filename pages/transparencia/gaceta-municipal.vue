@@ -80,7 +80,12 @@ const documentos = ref([
   },
   {
     nombre: 'CECI ACOROS',
-    url: '/files/news/CECI ACOROS.pdf',
+    url: '/files/docspedrooct2026/ceci-acoros.pdf',
+    external: true
+  },
+  {
+    nombre: 'CECI LOMAS',
+    url: '/files/docspedrooct2026/ceci-lomas.pdf',
     external: true
   }
 ])
