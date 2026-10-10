@@ -79,13 +79,13 @@ const documentos = ref([
     external: true
   },
   {
-    nombre: 'CECI ACOROS',
-    url: '/files/docspedrooct2026/ceci-acoros.pdf',
+    nombre: 'CECI COLONIA ACOROS',
+    url: '/files/docspedrooct2026/ceci-colonia-acoros.pdf',
     external: true
   },
   {
-    nombre: 'CECI LOMAS',
-    url: '/files/docspedrooct2026/ceci-lomas.pdf',
+    nombre: 'CECI LOMAS DE LA VILLA',
+    url: '/files/docspedrooct2026/ceci-lomas-de-la-villa.pdf',
     external: true
   }
 ])
